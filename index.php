@@ -1,4 +1,11 @@
-<?php get_header(); ?>
+<?php
+/*
+Template Name: Forside
+*/
+
+
+get_header();
+?>
 
 <div>
     <div class="relative w-full lg:h-[90vh] md:h-[60vh] h-[40vh] overflow-hidden">
