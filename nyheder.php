@@ -75,7 +75,7 @@ get_header();
                 </div>
             </div>
         <?php else : ?>
-            <p class="text-lg font-medium text-center text-gray-500">Žádné novinky nebyly nalezeny.</p>
+            <p class="text-lg font-medium text-center text-gray-500">No news was found.</p>
         <?php endif;
         wp_reset_postdata(); ?>
     </div>
