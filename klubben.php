@@ -14,7 +14,7 @@ get_header();
                 </p>
             </div>
             <div>
-                <img src="images/logoCombined.png" alt="logoCombined" class="h-auto lg:w-[650px] md:w-[550px] w-[450px]">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/logoCombined.png" alt="logoCombined" class="h-auto lg:w-[650px] md:w-[550px] w-[450px]">
             </div>
         </div>
     </div>
