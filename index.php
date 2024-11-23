@@ -3,7 +3,6 @@
 Template Name: Forside
 */
 
-
 get_header();
 ?>
 
@@ -57,13 +56,18 @@ get_header();
                 </div>
             <?php endwhile;
             wp_reset_postdata();
-        endif; ?>
+        else : ?>
+            <p class="text-gray-500 text-center">Žádné příspěvky nebyly nalezeny.</p>
+        <?php endif; ?>
     </div>
-    <div class="pt-8">
-        <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="bg-[#e3252d] text-white lg:text-base text-sm lg:py-4 py-3 lg:px-5 px-4 rounded-lg">Alle Nyheder</a>
+    <div class="pt-8 text-center">
+        <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="bg-[#e3252d] text-white lg:text-base text-sm lg:py-4 py-3 lg:px-5 px-4 rounded-lg">
+            Zobrazit všechny příspěvky
+        </a>
     </div>
 </div>
 
+<!-- Další sekce -->
 <div class="bg-[#e3252d]">
     <div class="container mx-auto max-w-7xl py-20">
         <div class="flex flex-col items-center">
@@ -85,44 +89,5 @@ get_header();
     </div>
 </div>
 
-<div class="container mx-auto max-w-8xl py-20">
-    <h2 class="flex justify-center lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517] pb-2">
-        Sponsorer
-    </h2>
-    <div>
-        <div class="flex flex-wrap justify-center items-center gap-6">
-            <?php
-            // Vytvoř seznam sponzorů (lze upravit na dynamické načítání z ACF nebo custom post types)
-            $sponsors = [
-                'bravida.png', 'cityOptik.png', 'nemByg.png', 'remaTarp.png', 'pGreens.png',
-                'conixi.png', 'sportDirect.png', 'elSalg.png', 'skiltefabriken.png', 'toyota.png',
-                'proRepubliQ.png', 'lolk.png', 'qubiqa.png', 'phonixTag.png', 'remaSonderris.png', 'vejers.png',
-            ];
-
-            foreach ($sponsors as $sponsor) : ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/sponsorer/<?php echo $sponsor; ?>" alt="<?php echo pathinfo($sponsor, PATHINFO_FILENAME); ?>" class="w-56 h-auto object-contain">
-            <?php endforeach; ?>
-        </div>
-    </div>
-</div>
-
-<div class="bg-[#e3252d]">
-    <div class="container mx-auto lg:max-w-4xl md:max-w-3xl py-28 px-8">
-        <div class="bg-white rounded-lg flex flex-col items-center">
-            <div class="space-y-6 lg:py-28 md:py-20 py-12 flex flex-col items-center">
-                <h3 class="flex justify-center lg:text-4xl md:text-3xl text-xl font-bold text-[#151517] text-center">
-                    Opdateringer til nyhedsbrev
-                </h3>
-                <p class="text-gray-500 lg:text-base md:text-base text-xs lg:w-full md:w-full w-[17rem] text-center">
-                    Indtast din e-mailadresse nedenfor for at abonnere på vores nyhedsbrev!
-                </p>
-                <div class="pt-4 flex justify-center space-x-4">
-                    <input type="email" class="bg-gray-50 border border-gray-300 text-gray-900 lg:text-sm md:text-sm text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block lg:w-[14rem] md:w-[14rem] w-[10rem] pl-4" placeholder="Your email address">
-                    <button class="bg-[#e3252d] text-white lg:text-base text-sm lg:py-4 py-3 lg:px-5 px-4 rounded-lg">Subscribe</button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
+<!-- Zbytek kódu -->
 <?php get_footer(); ?>
