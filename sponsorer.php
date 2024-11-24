@@ -22,8 +22,8 @@ get_header();
 
     @media (min-width: 1024px) {
     .responsive-all {
-        padding-bottom: 16rem; /* equivalent to pb-64 on lg */
-        padding-top: 12rem; /* equivalent to pt-64 on lg */
+        padding-bottom: 12rem; /* equivalent to pb-64 on lg */
+        padding-top: 8rem; /* equivalent to pt-64 on lg */
     }
     }
 
@@ -66,7 +66,6 @@ get_header();
         flex-direction: row; /* equivalent to sm:flex-row */
     }
     }
-
 
     .sponsors {
     width: 50%; /* equivalent to w-1/2 */
