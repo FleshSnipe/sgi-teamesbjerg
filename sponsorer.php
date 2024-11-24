@@ -63,29 +63,31 @@ get_header();
         }
     }
 
-    /* Obrázky sponzorů */
-.sponsors {
-    width: 50%; /* Zvýšena šířka oproti původní hodnotě */
-    height: auto;
-    object-fit: contain;
-    max-width: 300px; /* Maximální šířka pro větší obrázky */
+    .sponsors {
+    width: 50%; /* w-1/2 */
+    height: auto; /* h-auto */
+    object-fit: contain; /* object-contain */
+    max-width: 200px; /* max-w-[200px] */
 }
 
-@media (max-width: 640px) {
+@media (min-width: 640px) {
     .sponsors {
-        width: 30%; /* sm:w-1/2 */
-        max-width: 350px; /* Upravena maximální šířka na větších obrazovkách */
-        object-fit: contain;
+        width: 33.3333%; /* sm:w-1/3 */
     }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 768px) {
     .sponsors {
-        width: 40%; /* lg:w-1/3 */
-        max-width: 350px; /* Maximální šířka na velkých obrazovkách */
-        object-fit: contain;
+        width: 25%; /* md:w-1/4 */
     }
 }
+
+@media (min-width: 1024px) {
+    .sponsors {
+        width: 20rem; /* lg:w-80 (odpovídá 320px v CSS) */
+    }
+}
+
 
 </style>
 
