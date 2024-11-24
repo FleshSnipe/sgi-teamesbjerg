@@ -17,8 +17,7 @@ get_header();
 
     @media (min-width: 1024px) {
     .responsive-all {
-        height: 90vh; /* equivalent to lg:h-[90vh] */
-        padding-top: 16rem; /* equivalent to lg:py-0 */
+        padding-top: 0; /* equivalent to lg:py-0 */
         padding-bottom: 0; /* equivalent to lg:py-0 */
     }
     }
