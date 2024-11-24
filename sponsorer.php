@@ -2,6 +2,17 @@
 /* Template Name: Sponsorer */
 get_header();
 ?>
+<style>
+    img{
+        width: 160px;
+    }
+
+    @media only screen and (max-width: 768px){
+            img{
+            height:140px;
+            }
+        }
+</style>
 
 <div class="container mx-auto max-w-8xl h-[90vh] flex flex-col items-center justify-center">
     <h2 class="flex justify-center lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517] pb-10">
