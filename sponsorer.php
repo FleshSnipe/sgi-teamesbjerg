@@ -107,7 +107,7 @@ get_header();
                 Skriv en mail eller en besked så tager vi en snak om det.
             </p>
             <div class="flex flex-col items-center space-y-2">
-                <img src="images/coach.jpg" alt="coach">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/coach.jpg" alt="U19 Cheftræner" class="w-auto h-[299px] trener">
                 <h2 class="lg:text-3xl md:text-2xl text-xl font-bold text-[#151517]">Morten Laugesen Jørgensen</h2>
                 <p class="text-lg font-medium">mortenlaugesen@outlook.com</p>
                 <p class="text-lg font-medium">+45 31 67 09 95</p>
