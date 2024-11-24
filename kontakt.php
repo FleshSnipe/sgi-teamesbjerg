@@ -17,8 +17,8 @@ get_header();
 
     @media (min-width: 1024px) {
     .responsive-all {
-        padding-top: 0; /* equivalent to lg:py-0 */
-        padding-bottom: 0; /* equivalent to lg:py-0 */
+        padding-top: 4rem; /* equivalent to lg:py-0 */
+        padding-bottom: 4rem; /* equivalent to lg:py-0 */
     }
     }
 
@@ -75,7 +75,7 @@ get_header();
             <p class="text-lg font-medium">+45 52 73 85 35</p>
         </div>
     </div>
-    <div class="container pt-16 pb-20 mx-auto text-center max-w-7xl responsive-map">
+    <div class="container pt-16 mx-auto text-center max-w-7xl responsive-map">
         <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517] pb-4">Adresse</h1>
         <p class="text-lg font-medium">Præstemarksvej 43,</p>
         <p class="text-lg font-medium">6710 Esbjerg Sædding-Guldager</p>
