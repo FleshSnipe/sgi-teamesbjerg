@@ -3,9 +3,16 @@
 get_header();
 ?>
 <style>
-    .responsive-map{
-        padding-bottom:6rem;
+    .responsive-map {
+    padding-bottom: 0; /* Default for smaller screens */
     }
+
+    @media (min-width: 1024px) {
+    .responsive-map {
+        padding-bottom: 16rem; /* Equivalent to padding-bottom on larger screens */
+    }
+    }
+
 </style>
 
 <div class="container mx-auto max-w-4xl lg:h-[90vh] h-full flex flex-col justify-center lg:py-0 py-20">
