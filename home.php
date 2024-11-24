@@ -31,7 +31,7 @@ get_header();
     <div class="flex justify-center lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517] pb-8">
         <h2>Nyheder</h2>
     </div>
-    <div class="space-y-8 flex flex-col items-center">
+    <div class="flex flex-col items-center space-y-8">
         <?php
         // Nastavení query pro příspěvky
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -43,24 +43,24 @@ get_header();
 
         if ($news_query->have_posts()) :
             while ($news_query->have_posts()) : $news_query->the_post(); ?>
-                <div class="flex lg:flex-row md:flex-row flex-col items-center justify-center shadow-lg rounded-lg">
-                    <div>
+                <div class="flex flex-col items-center justify-center rounded-lg shadow-lg lg:flex-row md:flex-row">
+                    <div class="w-full lg:w-1/2 md:w-1/2">
                         <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="rounded-l-lg w-auto lg:h-[350px] md:h-[220px] h-[250px]">
+                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="w-full h-auto rounded-l-lg">
                         <?php endif; ?>
                     </div>
-                    <div class="space-y-4 lg:pl-20 pl-8 lg:py-0 md:py-0 py-12 pr-8">
-                        <h3 class="lg:text-xl md:text-lg text-sm font-medium">
+                    <div class="py-12 pl-8 pr-8 space-y-4 lg:pl-20 lg:py-0 md:py-0">
+                        <h3 class="text-sm font-medium lg:text-xl md:text-lg">
                             <a href="<?php the_permalink(); ?>" class="hover:underline"><?php the_title(); ?></a>
                         </h3>
-                        <p class="text-gray-500 lg:text-base md:text-base text-xs">
+                        <p class="text-xs text-gray-500 lg:text-base md:text-base">
                             <?php echo get_the_date(); ?>
                         </p>
                     </div>
                 </div>
             <?php endwhile; ?>
-            <div class="flex justify-between items-center pt-8">
-                <div class="flex justify-center items-center space-x-3 flex-1">
+            <div class="flex items-center justify-between pt-8">
+                <div class="flex items-center justify-center flex-1 space-x-3">
                     <?php
                     // Zobrazení stránkování
                     echo paginate_links([
@@ -80,5 +80,6 @@ get_header();
         wp_reset_postdata(); ?>
     </div>
 </div>
+
 
 <?php get_footer(); ?>
