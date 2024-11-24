@@ -21,7 +21,7 @@ get_header();
             foreach ($sponsors as $sponsor) : ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/sponsorer/<?php echo $sponsor; ?>" 
                      alt="<?php echo pathinfo($sponsor, PATHINFO_FILENAME); ?>" 
-                     class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-64 h-auto object-contain max-w-[200px]">
+                     class="object-contain w-56 h-auto">
             <?php endforeach; ?>
         </div>
     </div>
