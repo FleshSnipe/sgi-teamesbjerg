@@ -3,14 +3,41 @@
 get_header();
 ?>
 <style>
+    .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 56rem; /* equivalent to max-w-4xl */
+    height: 100%; /* equivalent to h-full */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 5rem; /* equivalent to py-20 */
+    padding-bottom: 5rem; /* equivalent to py-20 */
+    }
+
+    @media (min-width: 1024px) {
+    .container {
+        height: 90vh; /* equivalent to lg:h-[90vh] */
+        padding-top: 0; /* equivalent to lg:py-0 */
+        padding-bottom: 0; /* equivalent to lg:py-0 */
+    }
+    }
+
+    .trener {
+    width: auto; /* equivalent to w-auto */
+    height: 299px; /* equivalent to h-[299px] */
+    }
+
+
     .responsive-map {
     padding-bottom: 0; /* Default for smaller screens */
+    padding-top:4rem;
     }
 
     @media (min-width: 1024px) {
     .responsive-map {
         padding-bottom: 16rem; /* Equivalent to padding-bottom on larger screens */
-        padding-top:2rem;
+        padding-top:4rem;
     }
     }
 
@@ -32,7 +59,7 @@ get_header();
     <div class="flex flex-col justify-between space-y-8 lg:flex-row lg:space-y-0">
         <div class="flex flex-col items-center">
             <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517]">U19 Cheftræner</h1>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/coach.jpg" alt="U19 Cheftræner">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/coach.jpg" alt="U19 Cheftræner" class="w-auto h-[299px] trener">
             <h2 class="lg:text-3xl md:text-2xl text-xl font-bold text-[#151517]">Morten Laugesen Jørgensen</h2>
             <p class="text-lg font-medium">
                 <a href="mailto:mortenlaugesen@outlook.com" class="hover:text-red-700 hover:underline">mortenlaugesen@outlook.com</a>
@@ -41,7 +68,7 @@ get_header();
         </div>
         <div class="flex flex-col items-center">
             <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517]">U17 Cheftræner</h1>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/anonymous.png" alt="U17 Cheftræner" class="w-auto h-[299px]">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/anonymous.png" alt="U17 Cheftræner" class="w-auto h-[299px] trener">
             <h2 class="lg:text-3xl md:text-2xl text-xl font-bold text-[#151517]">Lars Nielsen</h2>
             <p class="text-lg font-medium">
                 <a href="mailto:L_bruun@outlook.com" class="hover:text-red-700 hover:underline">L_bruun@outlook.com</a>
