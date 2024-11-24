@@ -17,14 +17,14 @@
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
     <div class="bg-[#e3252d] lg:sticky static top-0 z-50 opacity-[90%]">
-        <div class="container mx-auto max-w-7xl lg:py-0 py-4">
-            <div class="flex items-center lg:justify-between justify-end py-4 relative lg:pr-0 pr-4">
+        <div class="container py-4 mx-auto max-w-7xl lg:py-0">
+            <div class="relative flex items-center justify-end py-4 pr-4 lg:justify-between lg:pr-0">
                 <!-- Logo -->
-                <div class="lg:static absolute left-1/2 transform -translate-x-1/2 lg:translate-x-0 lg:pr-0 pr-28">
+                <div class="absolute transform -translate-x-1/2 lg:static left-1/2 lg:translate-x-0 lg:pr-0 pr-28">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/teamEsbjerg.png" alt="teamEsbjergHandball" class="w-auto h-20">
                 </div>
-                <div class="lg:block hidden">
-                    <ul class="text-white text-lg font-medium flex space-x-16">
+                <div class="hidden lg:block">
+                    <ul class="flex space-x-16 text-lg font-medium text-white">
                         <li>
                             <a href="<?php echo home_url('/'); ?>" class="relative after:content-[''] after:absolute after:h-[2px] after:w-0 after:bg-white after:bottom-[-16px] after:left-1/2 after:-translate-x-1/2 after:origin-center hover:after:w-full after:transition-all after:duration-300 active:after:w-full focus:after:w-full">
                                 Forside
@@ -47,15 +47,15 @@
                         </li>
                         <li>
                             <a href="<?php echo home_url('/kontakt/'); ?>" class="relative after:content-[''] after:absolute after:h-[2px] after:w-0 after:bg-white after:bottom-[-16px] after:left-1/2 after:-translate-x-1/2 after:origin-center hover:after:w-full after:transition-all after:duration-300 focus:after:w-full active:after:w-full">
-                                Kontakt Os
+                                Kontakt us
                             </a>
                         </li>
                     </ul>
                 </div>                                         
-                <div class="lg:static absolute left-1/2 transform -translate-x-1/2 lg:translate-x-0 lg:pl-0 pl-28">
+                <div class="absolute transform -translate-x-1/2 lg:static left-1/2 lg:translate-x-0 lg:pl-0 pl-28">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/sgiHandball.png" alt="sgiHandball" class="w-auto h-20">
                 </div>
-                <div class="lg:hidden block">
+                <div class="block lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
                         <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                     </svg>                      
