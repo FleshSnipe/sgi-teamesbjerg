@@ -8,7 +8,7 @@ get_header();
         Sponsorer
     </h2>
     <div>
-        <div class="flex flex-wrap justify-center items-center gap-6">
+        <div class="flex flex-col flex-wrap items-center justify-center gap-6 sm:flex-row">
             <?php
             // Dynamické načítání sponzorů pomocí ACF nebo vlastního post typu
             // V tomto případě použijeme pole s názvy obrázků jako ukázku
@@ -21,7 +21,7 @@ get_header();
             foreach ($sponsors as $sponsor) : ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/sponsorer/<?php echo $sponsor; ?>" 
                      alt="<?php echo pathinfo($sponsor, PATHINFO_FILENAME); ?>" 
-                     class="w-56 h-auto object-contain">
+                     class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-64 h-auto object-contain max-w-[200px]">
             <?php endforeach; ?>
         </div>
     </div>
