@@ -96,7 +96,26 @@ get_header();
 
 
 </style>
-
+<div class="container mx-auto max-w-7xl">
+    <div class="flex flex-col items-center pt-20 pb-16">
+        <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517] lg:mb-8 mb-4">
+            Vil du være vores sponsor?
+        </h1>
+        <div class="flex flex-col items-center justify-center space-x-4 lg:flex-row">
+            <p class="max-w-xl px-4 text-sm lg:text-lg md:text-base lg:px-0">
+                Vi går op i at sikre et super samarbejde for begge parter. Der er mange måder at skabe værdi på og vi vil gerne hjælpe jer til at skabe salg, eksponering og meget mere.<br><br>
+                Vi har en tilskuerebase der favner forholdsvis bredt. Den består primært af unge, kerne familien og bedsteforældre. Derudover har vi kontakt til mange forskellige virksomheder i Esbjerg-området. Hvis det lyder som jeres målgruppe, så vil vi meget gerne tage en snak med jer for at se om et samarbejde vil give mening.<br><br>
+                Skriv en mail eller en besked så tager vi en snak om det.
+            </p>
+            <div class="flex flex-col items-center space-y-2">
+                <img src="images/coach.jpg" alt="coach">
+                <h2 class="lg:text-3xl md:text-2xl text-xl font-bold text-[#151517]">Morten Laugesen Jørgensen</h2>
+                <p class="text-lg font-medium">mortenlaugesen@outlook.com</p>
+                <p class="text-lg font-medium">+45 31 67 09 95</p>
+            </div>
+        </div>
+    </div>
+</div>
 <div class="responsive-all">
     <h2>Sponsorer</h2>
     <div>
