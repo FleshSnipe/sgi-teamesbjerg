@@ -81,7 +81,8 @@
                         </svg> 
                     </a>                     
                 </div>
-                <div id="navbarContent" class="flex flex-col items-center justify-center hidden pt-8">
+            </div>
+            <div id="navbarContent" class="flex flex-col items-center justify-center hidden pt-8">
                 <ul class="text-white">
                     <li>
                         <a href="<?php echo home_url('/'); ?>" class="relative after:content-[''] after:absolute after:h-[2px] after:w-0 after:bg-white after:bottom-[-16px] after:left-1/2 after:-translate-x-1/2 after:origin-center hover:after:w-full after:transition-all after:duration-300 active:after:w-full focus:after:w-full">
@@ -109,7 +110,6 @@
                         </a>
                     </li>
                 </ul>
-            </div>
             </div>
         </div>
     </div>
