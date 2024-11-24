@@ -4,10 +4,16 @@ get_header();
 ?>
 <style>
     img{
-        width: 160px;
+        width: 180px;
     }
 
-    @media only screen and (max-width: 768px){
+    @media only screen and (max-width: 992px){
+            img{
+            height:160px;
+            }
+        }
+
+        @media only screen and (max-width: 768px){
             img{
             height:140px;
             }
