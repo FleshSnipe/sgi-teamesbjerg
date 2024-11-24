@@ -5,7 +5,7 @@ get_header();
 
 <div class="container mx-auto max-w-8xl h-[90vh] flex flex-col items-center justify-center">
     <h2 class="flex justify-center lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517] pb-10">
-        Sponsorer
+        Sponsorerr
     </h2>
     <div>
         <div class="flex flex-wrap items-center justify-center gap-6">
@@ -21,7 +21,7 @@ get_header();
             foreach ($sponsors as $sponsor) : ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/sponsorer/<?php echo $sponsor; ?>" 
                      alt="<?php echo pathinfo($sponsor, PATHINFO_FILENAME); ?>" 
-                     class="w-1/2 sm:w-1/3 md:w-1/4 lg:w-64 h-auto object-contain max-w-[200px]">
+                     class="object-contain w-48 h-auto">
             <?php endforeach; ?>
         </div>
     </div>
