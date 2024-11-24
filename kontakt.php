@@ -3,7 +3,7 @@
 get_header();
 ?>
 <style>
-    .container {
+    .responsive-all {
     margin-left: auto;
     margin-right: auto;
     max-width: 56rem; /* equivalent to max-w-4xl */
@@ -16,7 +16,7 @@ get_header();
     }
 
     @media (min-width: 1024px) {
-    .container {
+    .responsive-all {
         height: 90vh; /* equivalent to lg:h-[90vh] */
         padding-top: 0; /* equivalent to lg:py-0 */
         padding-bottom: 0; /* equivalent to lg:py-0 */
@@ -55,7 +55,7 @@ get_header();
 
 </style>
 
-<div class="container mx-auto max-w-4xl lg:h-[90vh] h-full flex flex-col justify-center lg:py-0 py-20">
+<div class="container mx-auto max-w-4xl lg:h-[90vh] h-full flex flex-col justify-center lg:py-0 py-20 responsive-all">
     <div class="flex flex-col justify-between space-y-8 lg:flex-row lg:space-y-0">
         <div class="flex flex-col items-center">
             <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517]">U19 Cheftræner</h1>
