@@ -10,20 +10,20 @@ get_header();
     display: flex;
     flex-direction: column;
     padding-bottom: 4rem; /* default for pb-16 */
-    padding-top: 4rem; /* default for pt-16 */
+    padding-top: 2rem; /* default for pt-16 */
     }
 
     @media (min-width: 768px) {
     .responsive-all {
         padding-bottom: 10rem; /* equivalent to pb-40 on md */
-        padding-top: 10rem; /* equivalent to pt-40 on md */
+        padding-top: 6rem; /* equivalent to pt-40 on md */
     }
     }
 
     @media (min-width: 1024px) {
     .responsive-all {
         padding-bottom: 16rem; /* equivalent to pb-64 on lg */
-        padding-top: 16rem; /* equivalent to pt-64 on lg */
+        padding-top: 12rem; /* equivalent to pt-64 on lg */
     }
     }
 
