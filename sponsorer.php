@@ -71,26 +71,18 @@ get_header();
     max-width: 300px; /* Maximální šířka pro větší obrázky */
 }
 
-@media (min-width: 640px) {
+@media (max-width: 640px) {
     .sponsors {
-        width: 50%; /* sm:w-1/2 */
+        width: 30%; /* sm:w-1/2 */
         max-width: 350px; /* Upravena maximální šířka na větších obrazovkách */
         object-fit: contain;
     }
 }
 
-@media (min-width: 768px) {
+@media (max-width: 1024px) {
     .sponsors {
-        width: 40%; /* md:w-2/5 */
-        max-width: 400px; /* Maximální šířka na středních obrazovkách */
-        object-fit: contain;
-    }
-}
-
-@media (min-width: 1024px) {
-    .sponsors {
-        width: 30%; /* lg:w-1/3 */
-        max-width: 450px; /* Maximální šířka na velkých obrazovkách */
+        width: 40%; /* lg:w-1/3 */
+        max-width: 350px; /* Maximální šířka na velkých obrazovkách */
         object-fit: contain;
     }
 }
