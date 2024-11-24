@@ -3,91 +3,91 @@
 get_header();
 ?>
 <style>
-    /* Kontejner pro celkový obsah sponzorů */
-.container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1920px; /* max-w-8xl */
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 16px; /* pb-16 */
-}
+    .responsive-all {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90rem; /* equivalent to max-w-8xl */
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 4rem; /* default for pb-16 */
+        }
 
-@media (min-width: 768px) {
-    .container {
-        padding-bottom: 40px; /* md:pb-40 */
+    @media (min-width: 768px) {
+    .responsive-all {
+        padding-bottom: 10rem; /* equivalent to pb-40 on md */
     }
-}
-
-@media (min-width: 1024px) {
-    .container {
-        padding-bottom: 64px; /* lg:pb-64 */
     }
-}
 
-/* Nadpis */
-h2 {
+    @media (min-width: 1024px) {
+    .responsive-all {
+        padding-bottom: 16rem; /* equivalent to pb-64 on lg */
+    }
+    }
+
+
+    h2 {
     display: flex;
     justify-content: center;
-    font-size: 1.5rem; /* text-2xl */
+    font-size: 1.5rem; /* equivalent to text-2xl */
     font-weight: bold;
     color: #151517;
-    padding-bottom: 10px;
-}
-
-@media (min-width: 768px) {
-    h2 {
-        font-size: 1.875rem; /* md:text-3xl */
+    padding-bottom: 2.5rem; /* equivalent to pb-10 */
     }
-}
 
-@media (min-width: 1024px) {
+    @media (min-width: 768px) {
     h2 {
-        font-size: 2.25rem; /* lg:text-4xl */
+        font-size: 1.875rem; /* equivalent to text-3xl on md */
     }
-}
+    }
 
-/* Flex kontejner pro sekce sponzorů */
-.flex-wrap {
+    @media (min-width: 1024px) {
+    h2 {
+        font-size: 2.25rem; /* equivalent to text-4xl on lg */
+    }
+    }
+
+
+    /* Flex kontejner pro sekce sponzorů */
+    .responsive1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1.5rem; /* equivalent to gap-6 */
     flex-direction: column;
-}
-
-@media (min-width: 640px) {
-    .flex-wrap {
-        flex-direction: row; /* sm:flex-row */
     }
-}
 
-/* Styly pro obrázky sponzorů */
-.sponsor-img {
-    width: 50%; /* w-1/2 */
-    height: auto; /* h-auto */
-    object-fit: contain; /* object-contain */
-    max-width: 200px; /* max-w-[200px] */
-}
-
-@media (min-width: 640px) {
-    .sponsor-img {
-        width: 33.3333%; /* sm:w-1/3 */
+    @media (min-width: 640px) {
+    .responsive1 {
+        flex-direction: row; /* equivalent to sm:flex-row */
     }
-}
-
-@media (min-width: 768px) {
-    .sponsor-img {
-        width: 25%; /* md:w-1/4 */
     }
-}
 
-@media (min-width: 1024px) {
-    .sponsor-img {
-        width: 20rem; /* lg:w-80 (odpovídá 320px v CSS) */
+
+    .sponsors {
+    width: 50%; /* equivalent to w-1/2 */
+    height: auto;
+    object-fit: contain;
+    max-width: 200px; /* equivalent to max-w-[200px] */
     }
-}
+
+    @media (min-width: 640px) {
+    .sponsors {
+        width: 33.33%; /* equivalent to sm:w-1/3 */
+    }
+    }
+
+    @media (min-width: 768px) {
+    .sponsors {
+        width: 25%; /* equivalent to md:w-1/4 */
+    }
+    }
+
+    @media (min-width: 1024px) {
+    .sponsors {
+        width: 16rem; /* equivalent to lg:w-64 */
+    }
+    }
 
 
 
