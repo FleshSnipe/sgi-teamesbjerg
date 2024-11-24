@@ -10,6 +10,7 @@ get_header();
         width: 100%; /* Kontejner zabírá celou šířku stránky */
         max-width: 1200px; /* Maximální šířka kontejneru */
         margin: 0 auto; /* Centrovat na stránce */
+        padding-bottom:4rem;
     }
 
     .video-container iframe {
@@ -42,7 +43,7 @@ get_header();
         <div class="video-container">
             <iframe 
                 class="video-frame" 
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                src="https://www.youtube.com/embed/u2XTcLqXG0Q" 
                 frameborder="0" 
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                 allowfullscreen>
