@@ -3,66 +3,68 @@
 get_header();
 ?>
 <style>
-    .container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1920px; /* max-w-8xl */
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 16px; /* pb-16 */
-}
-
-@media (min-width: 768px) {
-    .container {
-        padding-bottom: 40px; /* md:pb-40 */
+    .responsive-all {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Zarovnání obsahu na střed na ose Y */
+        align-items: center; /* Zarovnání obsahu na střed na ose X */
+        height: 90vh; /* Nastavení výšky na 90vh */
+        padding-bottom: 16px;
+        margin: 0 auto;
+        max-width: 1920px; /* max-w-8xl */
+        padding-bottom:256px;
     }
-}
 
-@media (min-width: 1024px) {
-    .container {
-        padding-bottom: 64px; /* lg:pb-64 */
+    @media (min-width: 768px) {
+        .responsive-all {
+            padding-bottom: 40px; /* md:pb-40 */
+        }
     }
-}
 
-h2 {
-    display: flex;
-    justify-content: center;
-    font-size: 1.5rem; /* text-2xl */
-    font-weight: bold;
-    color: #151517;
-    padding-bottom: 10px;
-}
-
-@media (min-width: 768px) {
-    h2 {
-        font-size: 1.875rem; /* md:text-3xl */
+    @media (min-width: 1024px) {
+        .responsive-all {
+            padding-bottom: 64px; /* lg:pb-64 */
+        }
     }
-}
 
-@media (min-width: 1024px) {
-    h2 {
-        font-size: 2.25rem; /* lg:text-4xl */
+    .responsive-all h2 {
+        display: flex;
+        justify-content: center;
+        font-size: 1.5rem; /* text-2xl */
+        font-weight: bold;
+        color: #151517;
+        padding-bottom: 10px;
     }
-}
 
-/* Flex kontejner pro sponzory */
-.flex-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 1.5rem;
-    flex-direction: column;
-}
-
-@media (min-width: 640px) {
-    .flex-wrap {
-        flex-direction: row; /* sm:flex-row */
+    @media (min-width: 768px) {
+        .responsive-all h2 {
+            font-size: 1.875rem; /* md:text-3xl */
+        }
     }
-}
 
-/* Styly pro obrázky sponzorů */
-.sponsor-img {
+    @media (min-width: 1024px) {
+        .responsive-all h2 {
+            font-size: 2.25rem; /* lg:text-4xl */
+        }
+    }
+
+    /* Flex kontejner pro sekce sponzorů */
+    .responsive1 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    @media (min-width: 640px) {
+        .responsive1 {
+            flex-direction: row;
+        }
+    }
+
+    .sponsors {
     width: 50%; /* w-1/2 */
     height: auto; /* h-auto */
     object-fit: contain; /* object-contain */
@@ -70,19 +72,19 @@ h2 {
 }
 
 @media (min-width: 640px) {
-    .sponsor-img {
+    .sponsors {
         width: 33.3333%; /* sm:w-1/3 */
     }
 }
 
 @media (min-width: 768px) {
-    .sponsor-img {
+    .sponsors {
         width: 25%; /* md:w-1/4 */
     }
 }
 
 @media (min-width: 1024px) {
-    .sponsor-img {
+    .sponsors {
         width: 20rem; /* lg:w-80 (odpovídá 320px v CSS) */
     }
 }
