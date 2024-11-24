@@ -92,25 +92,115 @@ get_header();
     }
     }
 
+    .container {
+    margin: 0 auto;
+    max-width: 1200px; /* max-w-7xl odpovídá této velikosti */
+}
+
+    .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5rem; /* pt-20 */
+        padding-bottom: 4rem; /* pb-16 */
+    }
+
+    .headline {
+        font-size: 2rem; /* text-2xl */
+        font-weight: bold; /* font-bold */
+        color: #151517;
+        margin-bottom: 1rem; /* mb-4 */
+
+        /* Větší velikosti pro větší obrazovky */
+        @media (min-width: 768px) {
+            font-size: 1.875rem; /* md:text-3xl */
+        }
+        @media (min-width: 1024px) {
+            font-size: 2.25rem; /* lg:text-4xl */
+            margin-bottom: 2rem; /* lg:mb-8 */
+        }
+    }
+
+    .text-and-image-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        /* Přepnutí na řádkové zarovnání pro větší obrazovky */
+        @media (min-width: 1024px) {
+            flex-direction: row;
+            gap: 1rem; /* space-x-4 */
+        }
+    }
+
+    .description {
+        max-width: 40rem; /* max-w-xl */
+        padding-left: 1rem; /* px-4 */
+        padding-right: 1rem; /* px-4 */
+        font-size: 0.875rem; /* text-sm */
+        line-height: 1.5;
+
+        /* Větší velikosti pro větší obrazovky */
+        @media (min-width: 768px) {
+            font-size: 1rem; /* md:text-base */
+        }
+        @media (min-width: 1024px) {
+            font-size: 1.125rem; /* lg:text-lg */
+            padding: 0; /* lg:px-0 */
+        }
+    }
+
+    .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem; /* space-y-2 */
+    }
+
+    .contact-image {
+        height: 299px; /* h-[299px] */
+        width: auto; /* w-auto */
+    }
+
+    .contact-name {
+        font-size: 1.25rem; /* text-xl */
+        font-weight: bold; /* font-bold */
+        color: #151517;
+
+        /* Větší velikosti pro větší obrazovky */
+        @media (min-width: 768px) {
+            font-size: 1.5rem; /* md:text-2xl */
+        }
+        @media (min-width: 1024px) {
+            font-size: 1.875rem; /* lg:text-3xl */
+        }
+}
+
+.contact-email,
+.contact-phone {
+    font-size: 1.125rem; /* text-lg */
+    font-weight: 500; /* font-medium */
+}
 
 
 </style>
-<div class="container mx-auto max-w-7xl">
-    <div class="flex flex-col items-center pt-20 pb-16">
-        <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517] lg:mb-8 mb-4">
+<div class="container">
+    <div class="content-wrapper">
+        <h1 class="headline">
             Vil du være vores sponsor?
         </h1>
-        <div class="flex flex-col items-center justify-center space-x-4 lg:flex-row">
-            <p class="max-w-xl px-4 text-sm lg:text-lg md:text-base lg:px-0">
+        <div class="text-and-image-wrapper">
+            <p class="description">
                 Vi går op i at sikre et super samarbejde for begge parter. Der er mange måder at skabe værdi på og vi vil gerne hjælpe jer til at skabe salg, eksponering og meget mere.<br><br>
                 Vi har en tilskuerebase der favner forholdsvis bredt. Den består primært af unge, kerne familien og bedsteforældre. Derudover har vi kontakt til mange forskellige virksomheder i Esbjerg-området. Hvis det lyder som jeres målgruppe, så vil vi meget gerne tage en snak med jer for at se om et samarbejde vil give mening.<br><br>
                 Skriv en mail eller en besked så tager vi en snak om det.
             </p>
-            <div class="flex flex-col items-center space-y-2">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/coach.jpg" alt="U19 Cheftræner" class="w-auto h-[299px] trener">
-                <h2 class="lg:text-3xl md:text-2xl text-xl font-bold text-[#151517]">Morten Laugesen Jørgensen</h2>
-                <p class="text-lg font-medium">mortenlaugesen@outlook.com</p>
-                <p class="text-lg font-medium">+45 31 67 09 95</p>
+            <div class="contact-wrapper">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/coach.jpg" alt="U19 Cheftræner" class="contact-image">
+                <h2 class="contact-name">Morten Laugesen Jørgensen</h2>
+                <p class="contact-email">mortenlaugesen@outlook.com</p>
+                <p class="contact-phone">+45 31 67 09 95</p>
             </div>
         </div>
     </div>
