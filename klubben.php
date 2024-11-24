@@ -11,6 +11,8 @@ get_header();
         max-width: 1200px; /* Maximální šířka kontejneru */
         margin: 0 auto; /* Centrovat na stránce */
         padding-bottom: 4rem;
+        padding-right:2rem;
+        padding-left:2rem;
     }
 
     .video-container iframe {
@@ -24,6 +26,8 @@ get_header();
     @media (max-width: 768px) {
         .video-container {
             padding-bottom: 2rem; /* Menší mezera na menších obrazovkách */
+            padding-right:2rem;
+            padding-left:2rem;
         }
 
         .video-container iframe {
@@ -34,6 +38,8 @@ get_header();
     @media (max-width: 480px) {
         .video-container {
             padding-bottom: 1rem; /* Ještě menší mezera na velmi malých obrazovkách */
+            padding-right:2rem;
+            padding-left:2rem;
         }
 
         .video-container iframe {
