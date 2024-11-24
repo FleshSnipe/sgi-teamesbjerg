@@ -3,18 +3,18 @@
 get_header();
 ?>
 <style>
-    img{
+    .sponsors{
         width: 180px;
     }
 
     @media only screen and (max-width: 992px){
-            img{
+            .sponsors{
             height:160px;
             }
         }
 
         @media only screen and (max-width: 768px){
-            img{
+            .sponsors{
             height:140px;
             }
         }
@@ -38,7 +38,7 @@ get_header();
             foreach ($sponsors as $sponsor) : ?>
                 <img src="<?php echo get_template_directory_uri(); ?>/images/sponsorer/<?php echo $sponsor; ?>" 
                      alt="<?php echo pathinfo($sponsor, PATHINFO_FILENAME); ?>" 
-                     class="object-contain w-40 h-auto">
+                     class="object-contain w-40 h-auto sponsors">
             <?php endforeach; ?>
         </div>
     </div>
