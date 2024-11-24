@@ -14,7 +14,12 @@
         }
 
         img{
+            height:90px;
+        }
+        @media only screen and (max-width: 768px){
+            img{
             height:80px;
+            }
         }
     </style>
 </head>
@@ -64,6 +69,35 @@
                         <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
                     </svg>                      
                 </div>
+                <div id="navbarContent" class="flex flex-col items-center justify-center hidden pt-8">
+                <ul class="text-white">
+                    <li>
+                        <a href="<?php echo home_url('/'); ?>" class="relative after:content-[''] after:absolute after:h-[2px] after:w-0 after:bg-white after:bottom-[-16px] after:left-1/2 after:-translate-x-1/2 after:origin-center hover:after:w-full after:transition-all after:duration-300 active:after:w-full focus:after:w-full">
+                            Forside
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo home_url('/nyheder/'); ?>" class="relative after:content-[''] after:absolute after:h-[2px] after:w-0 after:bg-white after:bottom-[-16px] after:left-1/2 after:-translate-x-1/2 after:origin-center hover:after:w-full after:transition-all after:duration-300 focus:after:w-full active:after:w-full">
+                            Nyheder
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo home_url('/klubben/'); ?>" class="relative after:content-[''] after:absolute after:h-[2px] after:w-0 after:bg-white after:bottom-[-16px] after:left-1/2 after:-translate-x-1/2 after:origin-center hover:after:w-full after:transition-all after:duration-300 focus:after:w-full active:after:w-full">
+                            Klubben
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo home_url('/sponsorer/'); ?>"" class="relative after:content-[''] after:absolute after:h-[2px] after:w-0 after:bg-white after:bottom-[-16px] after:left-1/2 after:-translate-x-1/2 after:origin-center hover:after:w-full after:transition-all after:duration-300 focus:after:w-full active:after:w-full">
+                            Sponsorer
+                        </a>
+                    </li>
+                    <li>
+                        <a href="<?php echo home_url('/kontakt/'); ?>" class="relative after:content-[''] after:absolute after:h-[2px] after:w-0 after:bg-white after:bottom-[-16px] after:left-1/2 after:-translate-x-1/2 after:origin-center hover:after:w-full after:transition-all after:duration-300 focus:after:w-full active:after:w-full">
+                            Kontakt Os
+                        </a>
+                    </li>
+                </ul>
+            </div>
             </div>
         </div>
     </div>
