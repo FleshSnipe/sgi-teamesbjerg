@@ -110,6 +110,8 @@ get_header();
         font-weight: bold; /* font-bold */
         color: #151517;
         margin-bottom: 1rem; /* mb-4 */
+        padding-right:1rem;
+        padding-left:1rem;
 
         /* Větší velikosti pro větší obrazovky */
         @media (min-width: 768px) {
