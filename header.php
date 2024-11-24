@@ -21,7 +21,7 @@
             <div id="navbar" class="relative flex items-center justify-end py-4 pr-4 lg:justify-between lg:pr-0">
         <!-- Logo -->
                 <div class="absolute transform -translate-x-1/2 lg:static left-1/2 lg:translate-x-0 lg:pr-0 pr-28">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/teamEsbjerg.png" alt="teamEsbjergHandball" class="w-auto h-16 lg:h-20 md:h-20">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/teamEsbjerg.png" alt="teamEsbjergHandball" class="w-auto h-8 lg:h-12 md:h-12">
                 </div>
                 <div class="hidden lg:block">
                     <ul class="flex flex-col space-x-16 text-lg font-medium text-white lg:flex-row">
@@ -53,7 +53,7 @@
                     </ul>
                 </div>                                         
                 <div class="absolute transform -translate-x-1/2 lg:static left-1/2 lg:translate-x-0 lg:pl-0 pl-28">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/sgiHandball.png" alt="sgiHandball" class="w-auto h-16 lg:h-20 md:h-20">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/sgiHandball.png" alt="sgiHandball" class="w-auto h-8 lg:h-12 md:h-12">
                 </div>
                 <div class="block lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
