@@ -3,10 +3,12 @@
 get_header();
 ?>
 <style>
-    /* Kontejner hlavní sekce */
     .responsive-all {
         display: flex;
         flex-direction: column;
+        justify-content: center; /* Zarovnání obsahu na střed na ose Y */
+        align-items: center; /* Zarovnání obsahu na střed na ose X */
+        height: 90vh; /* Nastavení výšky na 90vh */
         padding-bottom: 16px;
         margin: 0 auto;
         max-width: 1920px; /* max-w-8xl */
@@ -82,8 +84,7 @@ get_header();
             <?php
             // Dynamické načítání sponzorů
             $sponsors = [
-                'conixi.png', 'sportDirect.png', 'elSalg.png', 'skiltefabriken.png', 'toyota.png',
-                'proRepubliQ.png', 'lolk.png', 'qubiqa.png', 'phonixTag.png', 'remaSonderris.png', 'vejers.png'
+                'conixi.png', 'sportDirect.png', 'elSalg.png', 'skiltefabriken.png', 'toyota.png'
             ];
 
             foreach ($sponsors as $sponsor) : ?>
