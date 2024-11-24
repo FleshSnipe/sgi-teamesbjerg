@@ -10,7 +10,7 @@ get_header();
         width: 100%; /* Kontejner zabírá celou šířku stránky */
         max-width: 1200px; /* Maximální šířka kontejneru */
         margin: 0 auto; /* Centrovat na stránce */
-        padding-bottom:4rem;
+        padding-bottom: 4rem;
     }
 
     .video-container iframe {
@@ -18,11 +18,30 @@ get_header();
         max-width: 1200px; /* Zajistit, že video nepřesáhne max velikost */
         height: auto; /* Zachovat poměr stran */
         aspect-ratio: 16 / 9; /* Poměr stran videa */
-        border: 2px solid #ccc; /* Volitelný rámeček kolem videa */
-        border-radius: 8px; /* Volitelně zaoblené rohy */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Volitelný stín */
+    }
+
+    /* Responzivní styly pro menší obrazovky */
+    @media (max-width: 768px) {
+        .video-container {
+            padding-bottom: 2rem; /* Menší mezera na menších obrazovkách */
+        }
+
+        .video-container iframe {
+            max-width: 90%; /* Zmenšení maximální šířky videa */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .video-container {
+            padding-bottom: 1rem; /* Ještě menší mezera na velmi malých obrazovkách */
+        }
+
+        .video-container iframe {
+            max-width: 100%; /* Plná šířka videa na malých obrazovkách */
+        }
     }
 </style>
+
 
 <div class="container mx-auto max-w-7xl lg:h-[90vh] lg:py-0 py-20 flex justify-center">
         <div class="flex flex-col items-center justify-center lg:flex-row md:flex-col">
