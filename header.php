@@ -22,6 +22,16 @@
             }
         }
     </style>
+    <script>
+    document.addEventListener("DOMContentLoaded", function () {
+    var navbarContent = document.getElementById("navbarContent");
+    var toggleButton = document.getElementById("toggleButton");
+
+    toggleButton.addEventListener("click", function () {
+        navbarContent.classList.toggle("hidden");
+    });
+    });
+    </script>
 </head>
 <body <?php body_class(); ?>>
     <?php wp_body_open(); ?>
@@ -64,10 +74,12 @@
                 <div class="absolute transform -translate-x-1/2 lg:static left-1/2 lg:translate-x-0 lg:pl-0 pl-28">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/sgiHandball.png" alt="sgiHandball" class="h-[80px] w-auto2">
                 </div>
-                <div class="block lg:hidden">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
-                        <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
-                    </svg>                      
+                <div id="toggleButton" class="block lg:hidden">
+                    <a>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
+                            <path fill-rule="evenodd" d="M3 6.75A.75.75 0 0 1 3.75 6h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 6.75ZM3 12a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 12Zm0 5.25a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z" clip-rule="evenodd" />
+                        </svg> 
+                    </a>                     
                 </div>
                 <div id="navbarContent" class="flex flex-col items-center justify-center hidden pt-8">
                 <ul class="text-white">
