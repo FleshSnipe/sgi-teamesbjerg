@@ -10,6 +10,19 @@ get_header();
     @media (min-width: 1024px) {
     .responsive-map {
         padding-bottom: 16rem; /* Equivalent to padding-bottom on larger screens */
+        padding-top:2rem;
+    }
+    }
+
+    .map{
+        padding-right:2rem;
+        padding-left:2rem;
+    }
+
+    @media (min-width: 1024px) {
+    .map {
+        padding-right:0rem;
+        padding-left:0rem;
     }
     }
 
@@ -40,7 +53,7 @@ get_header();
         <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517] pb-4">Adresse</h1>
         <p class="text-lg font-medium">Præstemarksvej 43,</p>
         <p class="text-lg font-medium">6710 Esbjerg Sædding-Guldager</p>
-        <div class="flex justify-center">
+        <div class="flex justify-center map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d564.6707171714573!2d8.398439669681537!3d55.520473957527585!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464adf87341c3f4b%3A0x7f6910969c8d5a60!2sPr%C3%A6stemarksvej%2043%2C%206710%20Esbjerg%20Kommune!5e0!3m2!1scs!2sdk!4v1732372627003!5m2!1scs!2sdk" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>    
         </div> 
     </div>
