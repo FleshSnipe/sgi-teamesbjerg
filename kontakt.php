@@ -2,6 +2,11 @@
 /* Template Name: Kontakt */
 get_header();
 ?>
+<style>
+    .responsive-map{
+        padding-bottom:6rem;
+    }
+</style>
 
 <div class="container mx-auto max-w-4xl lg:h-[90vh] h-full flex flex-col justify-center lg:py-0 py-20">
     <div class="flex flex-col justify-between space-y-8 lg:flex-row lg:space-y-0">
@@ -24,8 +29,8 @@ get_header();
             <p class="text-lg font-medium">+45 52 73 85 35</p>
         </div>
     </div>
-    <div class="container pt-16 pb-20 mx-auto text-center max-w-7xl">
-        <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517] pb-8">Adresse</h1>
+    <div class="container pt-16 pb-20 mx-auto text-center max-w-7xl responsive-map">
+        <h1 class="lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517] pb-4">Adresse</h1>
         <p class="text-lg font-medium">Præstemarksvej 43,</p>
         <p class="text-lg font-medium">6710 Esbjerg Sædding-Guldager</p>
         <div class="flex justify-center">
