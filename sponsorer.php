@@ -65,7 +65,7 @@ get_header();
 
     /* Obrázky sponzorů */
 .sponsors {
-    width: 70%; /* Zvýšena šířka oproti původní hodnotě */
+    width: 50%; /* Zvýšena šířka oproti původní hodnotě */
     height: auto;
     object-fit: contain;
     max-width: 300px; /* Maximální šířka pro větší obrázky */
@@ -75,6 +75,7 @@ get_header();
     .sponsors {
         width: 50%; /* sm:w-1/2 */
         max-width: 350px; /* Upravena maximální šířka na větších obrazovkách */
+        object-fit: contain;
     }
 }
 
@@ -82,6 +83,7 @@ get_header();
     .sponsors {
         width: 40%; /* md:w-2/5 */
         max-width: 400px; /* Maximální šířka na středních obrazovkách */
+        object-fit: contain;
     }
 }
 
@@ -89,6 +91,7 @@ get_header();
     .sponsors {
         width: 30%; /* lg:w-1/3 */
         max-width: 450px; /* Maximální šířka na velkých obrazovkách */
+        object-fit: contain;
     }
 }
 
