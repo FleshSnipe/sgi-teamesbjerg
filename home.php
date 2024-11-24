@@ -29,7 +29,7 @@ get_header();
 
 <div class="container mx-auto lg:max-w-4xl md:max-w-xl max-w-[250px] py-20">
     <div class="flex justify-center lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517] pb-8">
-        <h2>Nyheder</h2>
+        <h2>Nyheder§</h2>
     </div>
     <div class="flex flex-col items-center space-y-8">
         <?php
