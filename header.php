@@ -12,6 +12,10 @@
         a.active::after {
             width: 100%;
         }
+
+        img{
+            height:80px;
+        }
     </style>
 </head>
 <body <?php body_class(); ?>>
