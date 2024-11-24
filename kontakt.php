@@ -35,7 +35,7 @@ get_header();
 
     @media (min-width: 1024px) {
     .responsive-map {
-        padding-bottom: 16rem; /* Equivalent to padding-bottom on larger screens */
+        padding-bottom: 2rem; /* Equivalent to padding-bottom on larger screens */
         padding-top:4rem;
     }
     }
