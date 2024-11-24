@@ -19,7 +19,7 @@
     <div class="bg-[#e3252d] lg:sticky static top-0 z-50 opacity-[90%]">
         <div class="container py-4 mx-auto max-w-7xl lg:py-0">
             <div id="navbar" class="relative flex items-center justify-end py-4 pr-4 lg:justify-between lg:pr-0">
-                <!-- Logo -->
+        <!-- Logo -->
                 <div class="absolute transform -translate-x-1/2 lg:static left-1/2 lg:translate-x-0 lg:pr-0 pr-28">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/teamEsbjerg.png" alt="teamEsbjergHandball" class="w-auto h-16 lg:h-20 md:h-20">
                 </div>
@@ -53,7 +53,7 @@
                     </ul>
                 </div>                                         
                 <div class="absolute transform -translate-x-1/2 lg:static left-1/2 lg:translate-x-0 lg:pl-0 pl-28">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/sgiHandball.png" alt="sgiHandball" class="w-auto h-20">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/sgiHandball.png" alt="sgiHandball" class="w-auto h-16 lg:h-20 md:h-20">
                 </div>
                 <div class="block lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
