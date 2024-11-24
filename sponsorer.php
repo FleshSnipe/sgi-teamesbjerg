@@ -62,6 +62,25 @@ get_header();
             flex-direction: row;
         }
     }
+
+    .sponsors {
+        width: 50%; /* w-1/2 */
+        height: auto;
+        object-fit: contain;
+        max-width: 200px;
+    }
+
+    @media (max-width: 640px) {
+        .sponsors {
+            width: 25%; /* sm:w-1/3 */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .sponsors {
+            width: 33.3333%; /* md:w-1/4 */
+        }
+    }
 </style>
 
 <div class="responsive-all">
