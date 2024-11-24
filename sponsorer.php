@@ -15,15 +15,15 @@ get_header();
 
     @media (min-width: 768px) {
     .responsive-all {
-        padding-bottom: 10rem; /* equivalent to pb-40 on md */
-        padding-top: 6rem; /* equivalent to pt-40 on md */
+        padding-bottom: 5rem; /* equivalent to pb-40 on md */
+        padding-top: 3rem; /* equivalent to pt-40 on md */
     }
     }
 
     @media (min-width: 1024px) {
     .responsive-all {
-        padding-bottom: 12rem; /* equivalent to pb-64 on lg */
-        padding-top: 8rem; /* equivalent to pt-64 on lg */
+        padding-bottom: 6rem; /* equivalent to pb-64 on lg */
+        padding-top: 4rem; /* equivalent to pt-64 on lg */
     }
     }
 
@@ -175,13 +175,13 @@ get_header();
         @media (min-width: 1024px) {
             font-size: 1.875rem; /* lg:text-3xl */
         }
-}
+    }
 
-.contact-email,
-.contact-phone {
-    font-size: 1.125rem; /* text-lg */
-    font-weight: 500; /* font-medium */
-}
+    .contact-email,
+    .contact-phone {
+        font-size: 1.125rem; /* text-lg */
+        font-weight: 500; /* font-medium */
+    }
 
 
 </style>
