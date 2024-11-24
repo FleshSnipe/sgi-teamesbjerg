@@ -20,8 +20,8 @@
         <div class="container py-4 mx-auto max-w-7xl lg:py-0">
             <div id="navbar" class="relative flex items-center justify-end py-4 pr-4 lg:justify-between lg:pr-0">
         <!-- Logo -->
-                <div class="absolute w-8 h-auto transform -translate-x-1/2 lg:static left-1/2 lg:translate-x-0 lg:pr-0 pr-28">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/teamEsbjerg.png" alt="teamEsbjergHandball" class="w-8 h-auto">
+                <div class="absolute transform -translate-x-1/2 lg:static left-1/2 lg:translate-x-0 lg:pr-0 pr-28">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/teamEsbjerg.png" alt="teamEsbjergHandball" class="h-[80px] w-auto">
                 </div>
                 <div class="hidden lg:block">
                     <ul class="flex flex-col space-x-16 text-lg font-medium text-white lg:flex-row">
@@ -52,8 +52,8 @@
                         </li>
                     </ul>
                 </div>                                         
-                <div class="absolute w-8 h-auto transform -translate-x-1/2 lg:static left-1/2 lg:translate-x-0 lg:pl-0 pl-28">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/sgiHandball.png" alt="sgiHandball" class="w-8 h-auto">
+                <div class="absolute transform -translate-x-1/2 lg:static left-1/2 lg:translate-x-0 lg:pl-0 pl-28">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/sgiHandball.png" alt="sgiHandball" class="h-[80px] w-auto2">
                 </div>
                 <div class="block lg:hidden">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6">
