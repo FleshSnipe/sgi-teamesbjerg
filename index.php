@@ -41,9 +41,9 @@ get_header();
         if ($news_query->have_posts()) :
             while ($news_query->have_posts()) : $news_query->the_post(); ?>
                 <div class="flex flex-col items-center justify-center rounded-lg shadow-lg lg:flex-row md:flex-row">
-                    <div class="w-full lg:w-1/2 md:w-1/2">
+                    <div class="w-full h-full lg:w-1/2 md:w-1/2">
                         <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="w-full h-auto rounded-l-lg">
+                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="w-full h-full rounded-l-lg">
                         <?php endif; ?>
                     </div>
                     <div class="flex flex-col items-center justify-center py-12 pl-8 space-y-4 lg:pl-20 lg:py-0 md:py-0 div-in-center">
