@@ -31,7 +31,9 @@ get_header();
     }
 
     .div-in-center{
-        padding-left:0rem;
+        padding-left:2rem;
+        padding-top:2rem;
+        padding-bottom:2rem;
     }
 
     /* Ostatní styly pro stránkování */
