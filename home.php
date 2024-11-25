@@ -4,6 +4,15 @@ get_header();
 ?>
 
 <style>
+    /* Nová třída pro text uvnitř p v příspěvcích */
+    .news-post-text {
+        margin-top: 1rem; /* Přidá mezery nad text */
+        margin-bottom: 1rem; /* Přidá mezery pod text */
+        line-height: 1.5; /* Zlepší čitelnost textu */
+        color: #6b7280; /* Šedá barva pro text */
+    }
+
+    /* Ostatní styly pro stránkování */
     .page-numbers {
         display: flex;
         justify-content: center;
@@ -25,6 +34,7 @@ get_header();
     .page-numbers:hover {
         text-decoration: underline;
     }
+
 </style>
 
 <div class="container mx-auto lg:max-w-4xl md:max-w-xl max-w-[250px] py-20">
@@ -53,7 +63,7 @@ get_header();
                         <h3 class="text-sm font-medium lg:text-xl md:text-lg">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
-                        <p class="text-xs text-gray-500 lg:text-base md:text-base">
+                        <p class="text-xs text-gray-500 lg:text-base md:text-base news-post-text">
                             <?php echo get_the_date(); ?>
                         </p>
                     </div>
