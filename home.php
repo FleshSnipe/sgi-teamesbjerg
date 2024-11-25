@@ -4,12 +4,28 @@ get_header();
 ?>
 
 <style>
-    /* Nová třída pro text uvnitř p v příspěvcích */
     .news-post-text {
-        margin-top: 1rem; /* Přidá mezery nad text */
-        margin-bottom: 1rem; /* Přidá mezery pod text */
-        line-height: 1.5; /* Zlepší čitelnost textu */
-        color: #6b7280; /* Šedá barva pro text */
+    display: flex;            /* Používáme flexbox pro centrování */
+    justify-content: center;  /* Zarovnání textu na střed na ose X */
+    align-items: center;      /* Zarovnání textu na střed na ose Y */
+    margin-right: 3rem;       /* Přidá mezery pod text */
+    color: #6b7280;           /* Šedá barva pro text */
+    text-align: center;       /* Zarovnání textu na střed (pro víceřádkový text) */
+    height: 100%;             /* Aby text byl centrován na celé výšce, pokud je to potřeba */
+    }
+
+    /* Responzivní změna pro malé obrazovky (do 600px) */
+    @media (max-width: 600px) {
+        .news-post-text {
+            margin-right: 0; /* Odstranění mezery na pravé straně na velmi malých obrazovkách */
+        }
+    }
+
+    /* Responzivní změna pro střední obrazovky (mezi 600px a 768px) */
+    @media (max-width: 768px) {
+        .news-post-text {
+            margin-right: 3rem; /* Mezery zůstávají na středních obrazovkách */
+        }
     }
 
     /* Ostatní styly pro stránkování */
