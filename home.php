@@ -103,15 +103,20 @@ get_header();
 
 @media (min-width: 768px) {
     .news-thumbnail {
-        width: 50%; /* lg:w-1/2 a md:w-1/2 */
+        width: 60%; /* Zvětšení šířky na 60% místo původních 50% */
     }
 }
 
 /* Obrázek miniatury */
 .news-thumbnail-img {
-    width: 100%; /* w-full */
-    height: auto; /* h-auto */
+    width: 100%; /* Obrázek zabírá celou šířku svého kontejneru */
+    height: auto; /* Zachování poměru stran */
     border-radius: 0.5rem 0 0 0.5rem; /* rounded-l-lg */
+
+    /* Zvětšení výšky pro větší obrazovky */
+    @media (min-width: 768px) {
+        height: 400px; /* Nastavíme pevnou výšku pro větší obrazovky */
+    }
 }
 
 /* Obsah příspěvku */
