@@ -103,7 +103,7 @@ get_header();
                         'total' => $news_query->max_num_pages,
                         'current' => $paged,
                         'prev_text' => __('&laquo; Předchozí'),
-                        'next_text' => __('Další &raquo;'),
+                        'next_text' => __('Next &raquo;'),
                         'before_page_number' => '<span class="page-numbers">',
                         'after_page_number' => '</span>',
                     ]);
