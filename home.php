@@ -75,11 +75,11 @@ get_header();
                             <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="w-full h-auto rounded-l-lg">
                         <?php endif; ?>
                     </div>
-                    <div class="flex flex-col items-center justify-center py-12 pl-8 space-y-4 lg:pl-20 lg:py-0 md:py-0">
+                    <div class="flex flex-col items-center justify-center py-12 pl-8 space-y-4 lg:pl-20 lg:py-0 md:py-0 news-post-text">
                         <h3 class="text-sm font-medium lg:text-xl md:text-lg">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
-                        <p class="text-xs text-gray-500 lg:text-base md:text-base news-post-text">
+                        <p class="text-xs text-gray-500 lg:text-base md:text-base">
                             <?php echo get_the_date(); ?>
                         </p>
                     </div>
