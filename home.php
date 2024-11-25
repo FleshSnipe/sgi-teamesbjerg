@@ -4,11 +4,7 @@ get_header();
 ?>
 
 <style>
-    .greyy{
-        color: #6b7280;           /* Šedá barva pro text */
-    }
-
-    .news-post-text {
+   .news-post-text {
     display: flex;            /* Používáme flexbox pro centrování */
     margin-right: 1rem;       /* Přidá mezery pod text */
     height: 100%;             /* Aby text byl centrován na celé výšce, pokud je to potřeba */
@@ -28,6 +24,12 @@ get_header();
         .news-post-text {
             margin-right: 3rem; /* Mezery zůstávají na středních obrazovkách */
         }
+    }
+
+    .greyy{
+        display:flex;
+        color: #6b7280;           /* Šedá barva pro text */
+        justify-items: left;
     }
 
     .div-in-center{
