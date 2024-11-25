@@ -19,7 +19,7 @@
                     </div>
                 </div>
                 <div class="lg:pl-28 md:pl-12 pl-0">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/logoCombined.png" alt="logoCombined" class="h-auto w-[300px]">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/logoCombined_white.png" alt="logoCombined" class="h-auto w-[300px]">
                 </div>
             </div>
         </div>
