@@ -10,9 +10,7 @@ get_header();
 
     .news-post-text {
     display: flex;            /* Používáme flexbox pro centrování */
-    align-items: center;      /* Zarovnání textu na střed na ose Y */
-    margin-right: 3rem;       /* Přidá mezery pod text */
-    text-align: center;       /* Zarovnání textu na střed (pro víceřádkový text) */
+    margin-right: 1rem;       /* Přidá mezery pod text */
     height: 100%;             /* Aby text byl centrován na celé výšce, pokud je to potřeba */
     }
 
@@ -20,6 +18,8 @@ get_header();
     @media (max-width: 600px) {
         .news-post-text {
             margin-right: 0; /* Odstranění mezery na pravé straně na velmi malých obrazovkách */
+            align-items: center;      /* Zarovnání textu na střed na ose Y */
+            justify-items: center;
         }
     }
 
@@ -28,6 +28,10 @@ get_header();
         .news-post-text {
             margin-right: 3rem; /* Mezery zůstávají na středních obrazovkách */
         }
+    }
+
+    .div-in-center{
+        padding-left:0rem;
     }
 
     /* Ostatní styly pro stránkování */
@@ -77,7 +81,7 @@ get_header();
                             <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="w-full h-auto rounded-l-lg">
                         <?php endif; ?>
                     </div>
-                    <div class="flex flex-col items-center justify-center py-12 pl-8 space-y-4 lg:pl-20 lg:py-0 md:py-0">
+                    <div class="flex flex-col items-center justify-center py-12 pl-8 space-y-4 lg:pl-20 lg:py-0 md:py-0 div-in-center">
                         <h3 class="text-sm font-medium lg:text-xl md:text-lg news-post-text">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
