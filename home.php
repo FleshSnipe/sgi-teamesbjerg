@@ -43,17 +43,17 @@ get_header();
 
         if ($news_query->have_posts()) :
             while ($news_query->have_posts()) : $news_query->the_post(); ?>
-                <div class="flex flex-col items-center justify-center rounded-lg shadow-lg lg:flex-row md:flex-row">
-                    <div class="w-full lg:w-1/2 md:w-1/2">
+                <div class="news-item">
+                    <div class="news-thumbnail">
                         <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="w-full h-auto rounded-l-lg">
+                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="news-thumbnail-img">
                         <?php endif; ?>
                     </div>
-                    <div class="flex flex-col items-center justify-center py-12 pl-8 space-y-4 lg:pl-20 lg:py-0 md:py-0">
-                        <h3 class="text-sm font-medium lg:text-xl md:text-lg">
+                    <div class="news-content">
+                        <h3 class="news-title">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
-                        <p class="text-xs text-gray-500 lg:text-base md:text-base">
+                        <p class="news-date">
                             <?php echo get_the_date(); ?>
                         </p>
                     </div>
@@ -80,6 +80,86 @@ get_header();
         wp_reset_postdata(); ?>
     </div>
 </div>
+<style>
+    /* Kontejner pro celý příspěvek */
+.news-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* shadow-lg */
+
+    /* Zarovnání do řádku na větších obrazovkách */
+    @media (min-width: 768px) {
+        flex-direction: row;
+    }
+}
+
+/* Sekce s miniaturou */
+.news-thumbnail {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .news-thumbnail {
+        width: 50%; /* lg:w-1/2 a md:w-1/2 */
+    }
+}
+
+/* Obrázek miniatury */
+.news-thumbnail-img {
+    width: 100%; /* w-full */
+    height: auto; /* h-auto */
+    border-radius: 0.5rem 0 0 0.5rem; /* rounded-l-lg */
+}
+
+/* Obsah příspěvku */
+.news-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 0; /* py-12 */
+    padding-left: 2rem; /* pl-8 */
+
+    /* Větší odsazení na větších obrazovkách */
+    @media (min-width: 1024px) {
+        padding-left: 5rem; /* lg:pl-20 */
+        padding-top: 0; /* lg:py-0 */
+        padding-bottom: 0; /* lg:py-0 */
+    }
+}
+
+/* Nadpis příspěvku */
+.news-title {
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 500; /* font-medium */
+
+    /* Větší velikosti písma na větších obrazovkách */
+    @media (min-width: 768px) {
+        font-size: 1rem; /* md:text-lg */
+    }
+    @media (min-width: 1024px) {
+        font-size: 1.25rem; /* lg:text-xl */
+    }
+}
+
+/* Datum příspěvku */
+.news-date {
+    font-size: 0.75rem; /* text-xs */
+    color: #6b7280; /* text-gray-500 */
+
+    /* Větší velikosti písma na větších obrazovkách */
+    @media (min-width: 768px) {
+        font-size: 1rem; /* md:text-base */
+    }
+    @media (min-width: 1024px) {
+        font-size: 1rem; /* lg:text-base */
+    }
+}
+
+</style>
 
 
 <?php get_footer(); ?>
