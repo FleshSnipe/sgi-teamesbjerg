@@ -4,12 +4,14 @@ get_header();
 ?>
 
 <style>
+    .greyy{
+        color: #6b7280;           /* Šedá barva pro text */
+    }
+
     .news-post-text {
     display: flex;            /* Používáme flexbox pro centrování */
-    justify-content: center;  /* Zarovnání textu na střed na ose X */
     align-items: center;      /* Zarovnání textu na střed na ose Y */
     margin-right: 3rem;       /* Přidá mezery pod text */
-    color: #6b7280;           /* Šedá barva pro text */
     text-align: center;       /* Zarovnání textu na střed (pro víceřádkový text) */
     height: 100%;             /* Aby text byl centrován na celé výšce, pokud je to potřeba */
     }
@@ -79,7 +81,7 @@ get_header();
                         <h3 class="text-sm font-medium lg:text-xl md:text-lg news-post-text">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
-                        <p class="text-xs text-gray-500 lg:text-base md:text-base news-post-text">
+                        <p class="text-xs text-gray-500 lg:text-base md:text-base greyy news-post-text">
                             <?php echo get_the_date(); ?>
                         </p>
                     </div>
