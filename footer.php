@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="pl-0 lg:pl-28 md:pl-12">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/logoCombined_white.png" alt="logoCombined" class="h-auto w-[300px]">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/logoCombined_white.png" alt="logoCombined" class="h-auto w-[300px] image-max">
                 </div>
             </div>
         </div>
@@ -46,6 +46,10 @@
 </body>
 </html>
 <style>
+    .image-max{
+        max-width:261.58px;
+    }
+
     .padding-icons{
         padding-top:20px;
     }
