@@ -12,7 +12,7 @@
                 </div>
             </div>
         </div>
-        <div class="container py-20 mx-auto max-w-7xl">
+        <div class="container py-20 mx-auto max-w-7xl center-align">
             <div class="flex lg:flex-row md:flex-row flex-col items-center justify-center lg:divide-x md:divide-x lg:divide-y-0 md:divide-y-0 divide-y divide-[#687279] lg:space-y-0 md:space-y-0 space-y-8">
                 <div>
                     <div class="pr-0 lg:pr-28 md:pr-12">
@@ -52,5 +52,14 @@
 
     .icons{
         height:48px;
+    }
+
+    .center-align {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; /* Pokud chcete vertikální zarovnání */
+        text-align: center; /* Zajistí textové zarovnání */
+        min-height: 100vh; /* Pro vertikální centrování na celou výšku */
     }
 </style>
