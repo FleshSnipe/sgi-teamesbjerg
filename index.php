@@ -105,7 +105,7 @@ get_header();
             ];
 
             foreach ($sponsors as $sponsor) : ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/sponsorer/<?php echo $sponsor; ?>" alt="<?php echo pathinfo($sponsor, PATHINFO_FILENAME); ?>" class="object-contain w-56 h-auto">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/sponsorer/<?php echo $sponsor; ?>" alt="<?php echo pathinfo($sponsor, PATHINFO_FILENAME); ?>" class="object-contain w-56 h-auto image-width">
             <?php endforeach; ?>
         </div>
     </div>
@@ -186,6 +186,10 @@ get_header();
 
     .page-numbers:hover {
         text-decoration: underline;
+    }
+
+    .image-width{
+        width:192px;
     }
 
 </style>
