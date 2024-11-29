@@ -70,7 +70,7 @@ get_header();
             <h2 class="flex justify-center pb-8 text-2xl font-bold text-white lg:text-4xl md:text-3xl">
                 Socials
             </h2>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/wholeTeam.png" alt="wholeTeam" class="h-auto w-[75%]">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/wholeTeam.png" alt="wholeTeam" class="h-auto w-[50%]">
             <div class="flex">
                 <div class="flex space-x-4">
                     <a href="#">
