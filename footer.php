@@ -1,10 +1,22 @@
 <footer>
     <div class="bg-[#14141a]">
-        <div class="container mx-auto max-w-7xl py-20">
+        <div class="container pt-10 mx-auto">
+            <div class="flex justify-center">
+                <div class="flex space-x-4">
+                    <a href="https://www.facebook.com/tehk.sgi/">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebookGrey.png" alt="facebookIcon" class="w-auto h-8 transition-transform duration-300 ease-in-out lg:h-12 hover:scale-110">
+                    </a>
+                    <a href="https://www.instagram.com/tehk_sgi/">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/instagramGrey.png" alt="instagramIcon" class="w-auto h-8 transition-transform duration-300 ease-in-out lg:h-12 hover:scale-110">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="container pb-20 mx-auto max-w-7xl">
             <div class="flex lg:flex-row md:flex-row flex-col items-center justify-center lg:divide-x md:divide-x lg:divide-y-0 md:divide-y-0 divide-y divide-[#687279] lg:space-y-0 md:space-y-0 space-y-8">
                 <div>
-                    <div class="lg:pr-28 md:pr-12 pr-0">
-                        <h4 class="text-white font-medium text-center pb-2">
+                    <div class="pr-0 lg:pr-28 md:pr-12">
+                        <h4 class="pb-2 font-medium text-center text-white">
                             Kontakt Os
                         </h4>
                         <p class="text-[#687279] text-sm mb-8">
@@ -18,7 +30,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="lg:pl-28 md:pl-12 pl-0">
+                <div class="pl-0 lg:pl-28 md:pl-12">
                     <img src="<?php echo get_template_directory_uri(); ?>/images/logoCombined_white.png" alt="logoCombined" class="h-auto w-[300px]">
                 </div>
             </div>
@@ -33,3 +45,6 @@
 <?php wp_footer(); ?>
 </body>
 </html>
+<style>
+    
+</style>

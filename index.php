@@ -6,6 +6,11 @@ Template Name: Forside
 
 get_header();
 ?>
+<style>
+    .imageWholeTeam{
+        max-width: 60%;
+    }
+</style>
 
 <div>
     <div class="relative w-full lg:h-[90vh] md:h-[60vh] h-[40vh] overflow-hidden">
@@ -13,7 +18,7 @@ get_header();
             <?php 
             // Zobrazení obrázků pro carousel
             for ($i = 1; $i <= 5; $i++) : ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/image<?php echo $i; ?>.jpg" alt="Slide <?php echo $i; ?>" class="object-cover w-full h-full">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/heroImage.jpg" alt="Slide <?php echo $i; ?>" class="object-cover w-full h-full">
             <?php endfor; ?>
         </div>
 
@@ -59,7 +64,7 @@ get_header();
             wp_reset_postdata();
         endif; ?>
     </div>
-    <div class="pt-8 flex justify-center">
+    <div class="flex justify-center pt-8">
         <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="bg-[#e3252d] text-white font-medium lg:text-base text-sm lg:py-4 py-3 lg:px-5 px-4 rounded-lg">Alle Nyheder</a>
     </div>
 </div>
@@ -70,13 +75,13 @@ get_header();
             <h2 class="flex justify-center pb-8 text-2xl font-bold text-white lg:text-4xl md:text-3xl">
                 Socials
             </h2>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/wholeTeam.png" alt="wholeTeam" class="h-auto w-[75%]">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/wholeTeam.png" alt="wholeTeam" class="h-auto w-[50%] imageWholeTeam">
             <div class="flex">
                 <div class="flex space-x-4">
-                    <a href="#">
+                    <a href="https://www.facebook.com/tehk.sgi/">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/facebookIcon.png" alt="facebookIcon" class="w-auto h-12 transition-transform duration-300 ease-in-out lg:h-16 hover:scale-110">
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/tehk_sgi/">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/instagramIcon.png" alt="instagramIcon" class="w-auto h-12 transition-transform duration-300 ease-in-out lg:h-16 hover:scale-110">
                     </a>
                 </div>
