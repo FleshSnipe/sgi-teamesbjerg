@@ -64,6 +64,5 @@
         justify-content: center;
         flex-direction: column; /* Pokud chcete vertikální zarovnání */
         text-align: center; /* Zajistí textové zarovnání */
-        min-height: 100vh; /* Pro vertikální centrování na celou výšku */
     }
 </style>
