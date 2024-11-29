@@ -1,13 +1,13 @@
 <footer>
     <div class="bg-[#14141a]">
-        <div class="container pt-10 mx-auto">
+        <div class="container pt-10 mx-auto padding-icons">
             <div class="flex justify-center">
                 <div class="flex space-x-4">
                     <a href="https://www.facebook.com/tehk.sgi/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebookGrey.png" alt="facebookIcon" class="w-auto h-8 transition-transform duration-300 ease-in-out lg:h-12 hover:scale-110">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebookGrey.png" alt="facebookIcon" class="w-auto h-12 transition-transform duration-300 ease-in-out lg:h-16 hover:scale-110 icons">
                     </a>
                     <a href="https://www.instagram.com/tehk_sgi/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/instagramGrey.png" alt="instagramIcon" class="w-auto h-8 transition-transform duration-300 ease-in-out lg:h-12 hover:scale-110">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/instagramGrey.png" alt="instagramIcon" class="w-auto h-12 transition-transform duration-300 ease-in-out lg:h-16 hover:scale-110 icons">
                     </a>
                 </div>
             </div>
@@ -46,5 +46,12 @@
 </body>
 </html>
 <style>
-    
+    .padding-icons{
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+
+    .icons{
+        height:48px;
+    }
 </style>
