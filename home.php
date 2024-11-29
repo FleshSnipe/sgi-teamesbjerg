@@ -102,7 +102,7 @@ get_header();
                     echo paginate_links([
                         'total' => $news_query->max_num_pages,
                         'current' => $paged,
-                        'prev_text' => __('&laquo; Předchozí'),
+                        'prev_text' => __('&laquo; Previous'),
                         'next_text' => __('Next &raquo;'),
                         'before_page_number' => '<span class="page-numbers">',
                         'after_page_number' => '</span>',

@@ -100,7 +100,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="<?php echo home_url('/sponsorer/'); ?>"" class="relative after:content-[''] after:absolute after:h-[2px] after:w-0 after:bg-white after:bottom-[-16px] after:left-1/2 after:-translate-x-1/2 after:origin-center hover:after:w-full after:transition-all after:duration-300 focus:after:w-full active:after:w-full">
+                        <a href="<?php echo home_url('/sponsorer/'); ?>" class="relative after:content-[''] after:absolute after:h-[2px] after:w-0 after:bg-white after:bottom-[-16px] after:left-1/2 after:-translate-x-1/2 after:origin-center hover:after:w-full after:transition-all after:duration-300 focus:after:w-full active:after:w-full">
                             Sponsorer
                         </a>
                     </li>
