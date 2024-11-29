@@ -6,6 +6,11 @@ Template Name: Forside
 
 get_header();
 ?>
+<style>
+    .imageWholeTeam{
+        width: 50%;
+    }
+</style>
 
 <div>
     <div class="relative w-full lg:h-[90vh] md:h-[60vh] h-[40vh] overflow-hidden">
@@ -70,7 +75,7 @@ get_header();
             <h2 class="flex justify-center pb-8 text-2xl font-bold text-white lg:text-4xl md:text-3xl">
                 Socials
             </h2>
-            <img src="<?php echo get_template_directory_uri(); ?>/images/wholeTeam.png" alt="wholeTeam" class="h-auto w-[50%]">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/wholeTeam.png" alt="wholeTeam" class="h-auto w-[50%] imageWholeTeam">
             <div class="flex">
                 <div class="flex space-x-4">
                     <a href="#">
