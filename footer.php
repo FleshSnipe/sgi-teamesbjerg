@@ -1,18 +1,18 @@
 <footer>
     <div class="bg-[#14141a]">
-        <div class="container pt-10 mx-auto">
+        <div class="container pt-10 mx-auto padding-icons">
             <div class="flex justify-center">
                 <div class="flex space-x-4">
                     <a href="https://www.facebook.com/tehk.sgi/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebookGrey.png" alt="facebookIcon" class="w-auto h-8 transition-transform duration-300 ease-in-out lg:h-12 hover:scale-110">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebookGrey.png" alt="facebookIcon" class="w-auto h-12 transition-transform duration-300 ease-in-out lg:h-16 hover:scale-110 icons">
                     </a>
                     <a href="https://www.instagram.com/tehk_sgi/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/instagramGrey.png" alt="instagramIcon" class="w-auto h-8 transition-transform duration-300 ease-in-out lg:h-12 hover:scale-110">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/instagramGrey.png" alt="instagramIcon" class="w-auto h-12 transition-transform duration-300 ease-in-out lg:h-16 hover:scale-110 icons">
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container pb-20 mx-auto max-w-7xl">
+        <div class="container py-20 mx-auto max-w-7xl center-align">
             <div class="flex lg:flex-row md:flex-row flex-col items-center justify-center lg:divide-x md:divide-x lg:divide-y-0 md:divide-y-0 divide-y divide-[#687279] lg:space-y-0 md:space-y-0 space-y-8">
                 <div>
                     <div class="pr-0 lg:pr-28 md:pr-12">
@@ -31,7 +31,7 @@
                     </div>
                 </div>
                 <div class="pl-0 lg:pl-28 md:pl-12">
-                    <img src="<?php echo get_template_directory_uri(); ?>/images/logoCombined_white.png" alt="logoCombined" class="h-auto w-[300px]">
+                    <img src="<?php echo get_template_directory_uri(); ?>/images/logoCombined_white.png" alt="logoCombined" class="h-auto w-[300px] image-max">
                 </div>
             </div>
         </div>
@@ -46,5 +46,23 @@
 </body>
 </html>
 <style>
-    
+    .image-max{
+        max-width:261.58px;
+    }
+
+    .padding-icons{
+        padding-top:20px;
+    }
+
+    .icons{
+        height:48px;
+    }
+
+    .center-align {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column; /* Pokud chcete vertikální zarovnání */
+        text-align: center; /* Zajistí textové zarovnání */
+    }
 </style>
