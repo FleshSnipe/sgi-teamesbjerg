@@ -59,7 +59,7 @@ get_header();
             wp_reset_postdata();
         endif; ?>
     </div>
-    <div class="mt-10 flex justify-center">
+    <div class="pt-12 flex justify-center">
         <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="bg-[#e3252d] text-white font-medium lg:text-base text-sm lg:py-4 py-3 lg:px-5 px-4 rounded-lg">Alle Nyheder</a>
     </div>
 </div>
