@@ -1,18 +1,18 @@
 <footer>
     <div class="bg-[#14141a]">
-        <div class="container mx-auto">
-            <div class="flex">
+        <div class="container pt-10 mx-auto">
+            <div class="flex justify-center">
                 <div class="flex space-x-4">
                     <a href="https://www.facebook.com/tehk.sgi/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebookGrey.png" alt="facebookIcon" class="w-auto h-12 transition-transform duration-300 ease-in-out lg:h-16 hover:scale-110">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/facebookGrey.png" alt="facebookIcon" class="w-auto h-8 transition-transform duration-300 ease-in-out lg:h-12 hover:scale-110">
                     </a>
                     <a href="https://www.instagram.com/tehk_sgi/">
-                        <img src="<?php echo get_template_directory_uri(); ?>/images/instagramGrey.png" alt="instagramIcon" class="w-auto h-12 transition-transform duration-300 ease-in-out lg:h-16 hover:scale-110">
+                        <img src="<?php echo get_template_directory_uri(); ?>/images/instagramGrey.png" alt="instagramIcon" class="w-auto h-8 transition-transform duration-300 ease-in-out lg:h-12 hover:scale-110">
                     </a>
                 </div>
             </div>
         </div>
-        <div class="container py-20 mx-auto max-w-7xl">
+        <div class="container pb-20 mx-auto max-w-7xl">
             <div class="flex lg:flex-row md:flex-row flex-col items-center justify-center lg:divide-x md:divide-x lg:divide-y-0 md:divide-y-0 divide-y divide-[#687279] lg:space-y-0 md:space-y-0 space-y-8">
                 <div>
                     <div class="pr-0 lg:pr-28 md:pr-12">
@@ -45,3 +45,6 @@
 <?php wp_footer(); ?>
 </body>
 </html>
+<style>
+    
+</style>
