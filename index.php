@@ -189,7 +189,7 @@ get_header();
     }
 
     .image-width{
-        width:192px;
+        width:205px;
     }
 
 </style>
