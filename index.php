@@ -78,10 +78,10 @@ get_header();
             <img src="<?php echo get_template_directory_uri(); ?>/images/wholeTeam.png" alt="wholeTeam" class="h-auto w-[50%] imageWholeTeam">
             <div class="flex">
                 <div class="flex space-x-4">
-                    <a href="#">
+                    <a href="https://www.facebook.com/tehk.sgi/">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/facebookIcon.png" alt="facebookIcon" class="w-auto h-12 transition-transform duration-300 ease-in-out lg:h-16 hover:scale-110">
                     </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/tehk_sgi/">
                         <img src="<?php echo get_template_directory_uri(); ?>/images/instagramIcon.png" alt="instagramIcon" class="w-auto h-12 transition-transform duration-300 ease-in-out lg:h-16 hover:scale-110">
                     </a>
                 </div>
