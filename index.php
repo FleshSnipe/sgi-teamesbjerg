@@ -8,7 +8,7 @@ get_header();
 ?>
 <style>
     .imageWholeTeam{
-        width: 50%;
+        max-width: 60%;
     }
 </style>
 
