@@ -13,7 +13,7 @@ get_header();
             <?php 
             // Zobrazení obrázků pro carousel
             for ($i = 1; $i <= 5; $i++) : ?>
-                <img src="<?php echo get_template_directory_uri(); ?>/images/image<?php echo $i; ?>.jpg" alt="Slide <?php echo $i; ?>" class="object-cover w-full h-full">
+                <img src="<?php echo get_template_directory_uri(); ?>/images/heroImage.jpg" alt="Slide <?php echo $i; ?>" class="object-cover w-full h-full">
             <?php endfor; ?>
         </div>
 
@@ -59,7 +59,7 @@ get_header();
             wp_reset_postdata();
         endif; ?>
     </div>
-    <div class="pt-8 flex justify-center">
+    <div class="flex justify-center pt-8">
         <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="bg-[#e3252d] text-white font-medium lg:text-base text-sm lg:py-4 py-3 lg:px-5 px-4 rounded-lg">Alle Nyheder</a>
     </div>
 </div>
