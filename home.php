@@ -24,9 +24,8 @@ get_header();
         flex-direction: column;
         justify-content: center; /* Vertikální zarovnání */
         align-items: center;     /* Horizontální zarovnání */
-        height: 100%;            /* Výška kontejneru */
         padding: 2rem;
-        width: 400px;            /* Bílá část má šířku 400px */
+        width: 100%;            /* Bílá část má šířku 400px */
     }
 
     .thumbnail-fixed-size {
