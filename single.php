@@ -42,7 +42,7 @@ get_header();
         padding-right: 40px;
         background-color: #e3252d;
         color: #fff;
-        width: 150px;
+        width: 200px;
     }
 
     .prose p {
