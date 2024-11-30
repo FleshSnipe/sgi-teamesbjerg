@@ -75,6 +75,13 @@ get_header();
         padding-right:2rem;
     }
 
+    .thumbnail-fixed-width {
+        width: 300px; /* Nastavte požadovanou šířku */
+        height: auto; /* Zachová poměr stran obrázku */
+        object-fit: cover; /* Zajistí pěkné oříznutí, pokud je to potřeba */
+        border-radius: 8px; /* Volitelně zaoblené rohy */
+    }
+
 </style>
 
 <div class="container mx-auto lg:max-w-4xl md:max-w-xl max-w-[250px] py-20">
@@ -96,7 +103,7 @@ get_header();
                 <div class="flex flex-col items-center justify-center rounded-lg shadow-lg lg:flex-row md:flex-row">
                     <div class="w-full lg:w-1/2 md:w-1/2">
                         <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="w-full h-auto rounded-l-lg">
+                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="thumbnail-fixed-width">
                         <?php endif; ?>
                     </div>
                     <div class="flex flex-col items-center justify-center py-12 pl-8 space-y-4 lg:pl-20 lg:py-0 md:py-0 div-in-center">
