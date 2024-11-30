@@ -19,7 +19,7 @@ get_header();
 
 <style>
     .prose img {
-        align-self: center;
+        max
         max-width: 100%;
         height: auto;
     }
@@ -38,7 +38,7 @@ get_header();
     }
 
     .container {
-        max-width: 1100px;
+        max-width: 900px;
     }
 
 </style>
