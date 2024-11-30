@@ -10,6 +10,72 @@ get_header();
     .imageWholeTeam{
         max-width: 60%;
     }
+
+    .news-post-text {
+        display: flex;
+        justify-content: center; /* Horizontální zarovnání */
+        align-items: center;    /* Vertikální zarovnání */
+        text-align: center;     /* Zarovnání textu */
+        width: 100%;            /* Nadpis bude mít šířku 100% v rámci svého kontejneru */
+    }
+
+    .greyy {
+        display: flex;
+        justify-content: center; /* Horizontální zarovnání */
+        color: #6b7280;
+        text-align: center;
+    }
+
+    .div-in-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Vertikální zarovnání */
+        align-items: center;     /* Horizontální zarovnání */
+        padding: 2rem;
+        width: 100%;            /* Bílá část má šířku 400px */
+    }
+
+    .thumbnail-fixed-size {
+        width: 300px;           /* Nastavení stejné šířky pro všechny obrázky */
+        height: 200px;          /* Nastavení výšky pro všechny obrázky */
+        object-fit: cover;      /* Zabrání deformaci obrázku */
+        border-radius: 8px 0 0 8px;
+    }
+
+    .post-fixed-width {
+        display: flex;
+        flex-direction: row;    /* Obsah se zobrazí vedle sebe (obrázek + text) */
+        justify-content: start; /* Zarovnání na začátek (vlevo) */
+        width: 100%;            /* Vzít celou šířku dostupnou pro příspěvek */
+        max-width: 700px;       /* Maximální šířka pro celý příspěvek (obrázek + text) */
+        margin: 0 auto;         /* Centrum na stránce */
+        gap: 1rem;              /* Mezera mezi obrázkem a textem */
+        background-color: #fff; /* Bílá barva pozadí */
+        border-radius: 8px;     /* Zaoblení rohů */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Přidání stínu */
+    }
+
+    .flex-col-lg {
+        display: flex;
+        flex-direction: column; /* Na mobilu budou prvky pod sebou */
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        max-width: 700px;
+        margin: 0 auto;
+        padding: 2rem;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (max-width: 768px) {
+        .flex-col-lg {
+            flex-direction: column; /* Na mobilu budou prvky pod sebou */
+            max-width: 100%;         /* Na mobilu bude šířka postu 100% */
+        }
+    }
+
 </style>
 
 <div>
@@ -45,10 +111,10 @@ get_header();
 
         if ($news_query->have_posts()) :
             while ($news_query->have_posts()) : $news_query->the_post(); ?>
-                <div class="flex flex-col items-center justify-center rounded-lg shadow-lg lg:flex-row md:flex-row">
+                <div class="flex-col-lg">
                     <div class="w-full h-full lg:w-1/2 md:w-1/2">
                         <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="w-full h-full rounded-l-lg">
+                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="thumbnail-fixed-size">
                         <?php endif; ?>
                     </div>
                     <div class="flex flex-col items-center justify-center py-12 pl-8 space-y-4 lg:pl-20 lg:py-0 md:py-0 div-in-center">
