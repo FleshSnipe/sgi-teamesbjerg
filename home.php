@@ -5,37 +5,30 @@ get_header();
 
 <style>
    .news-post-text {
-        display: flex;            /* Používáme flexbox pro centrování */
-        margin-right: 1rem;       /* Přidá mezery pod text */
-        height: 100%;             /* Aby text byl centrován na celé výšce, pokud je to potřeba */
+        display: flex;
+        justify-content: center; /* Zarovnání na střed */
+        align-items: center;
+        text-align: center; /* Text se zarovná doprostřed */
+        margin-right: 0; /* Odstranění mezery */
+        height: 100%;
     }
 
     /* Responzivní změna pro malé obrazovky (do 600px) */
     @media (max-width: 600px) {
         .news-post-text {
-            margin-right: 0; /* Odstranění mezery na pravé straně na velmi malých obrazovkách */
-            align-items: center;      /* Zarovnání textu na střed na ose Y */
-            justify-items: center;
-        }
-    }
-
-    /* Responzivní změna pro střední obrazovky (mezi 600px a 768px) */
-    @media (max-width: 768px) {
-        .news-post-text {
-            margin-right: 3rem; /* Mezery zůstávají na středních obrazovkách */
+            margin-right: 0;
         }
     }
 
     .greyy {
         display: flex;
-        color: #6b7280;           /* Šedá barva pro text */
-        justify-items: left;
+        justify-content: center; /* Zarovnání na střed */
+        color: #6b7280;
+        text-align: center; /* Text se zarovná doprostřed */
     }
 
     .div-in-center {
-        padding-left: 2rem;
-        padding-top: 2rem;
-        padding-bottom: 2rem;
+        padding: 2rem;
     }
 
     /* Ostatní styly pro stránkování */
@@ -63,12 +56,12 @@ get_header();
 
     .pagination-prev,
     .pagination-next {
-        display: flex; /* Zarovnání šipky a textu na jeden řádek */
-        align-items: center; /* Vertikální zarovnání obsahu */
-        justify-content: center; /* Horizontální zarovnání */
-        min-width: 300px; /* Nastavení minimální šířky */
-        text-align: center; /* Zarovnání textu */
-        gap: 0.5rem; /* Mezera mezi šipkou a textem */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-width: 300px;
+        text-align: center;
+        gap: 0.5rem;
     }
 
     .pagination-prev {
@@ -76,27 +69,27 @@ get_header();
     }
 
     .thumbnail-fixed-width {
-        width: 300px; /* Nastavte požadovanou šířku */
-        height: auto; /* Zachová poměr stran obrázku */
-        object-fit: cover; /* Zajistí pěkné oříznutí, pokud je to potřeba */
-        border-radius: 8px; /* Volitelně zaoblené rohy */
+        width: 300px;
+        height: auto;
+        object-fit: cover;
+        border-radius: 8px;
     }
 
     .post-fixed-width {
-        width: 100%; /* Přizpůsobí se dostupnému prostoru */
-        max-width: 1200px; /* Maximální šířka pro větší obrazovky */
-        margin: 0 auto; /* Centrovat příspěvky */
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 
     @media (max-width: 768px) {
         .post-fixed-width {
-            max-width: 600px; /* Přizpůsobí šířku na středních obrazovkách */
+            max-width: 600px;
         }
     }
 
     @media (max-width: 480px) {
         .post-fixed-width {
-            max-width: 100%; /* Příspěvky se roztáhnou na celou šířku na malých obrazovkách */
+            max-width: 100%;
         }
     }
 </style>
@@ -127,7 +120,7 @@ get_header();
                         <h3 class="text-sm font-medium lg:text-xl md:text-lg news-post-text">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
-                        <p class="text-xs text-gray-500 lg:text-base md:text-base greyy news-post-text">
+                        <p class="text-xs text-gray-500 lg:text-base md:text-base greyy">
                             <?php echo get_the_date(); ?>
                         </p>
                     </div>
