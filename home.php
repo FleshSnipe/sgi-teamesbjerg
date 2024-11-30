@@ -5,9 +5,9 @@ get_header();
 
 <style>
    .news-post-text {
-    display: flex;            /* Používáme flexbox pro centrování */
-    margin-right: 1rem;       /* Přidá mezery pod text */
-    height: 100%;             /* Aby text byl centrován na celé výšce, pokud je to potřeba */
+        display: flex;            /* Používáme flexbox pro centrování */
+        margin-right: 1rem;       /* Přidá mezery pod text */
+        height: 100%;             /* Aby text byl centrován na celé výšce, pokud je to potřeba */
     }
 
     /* Responzivní změna pro malé obrazovky (do 600px) */
@@ -26,16 +26,16 @@ get_header();
         }
     }
 
-    .greyy{
-        display:flex;
+    .greyy {
+        display: flex;
         color: #6b7280;           /* Šedá barva pro text */
         justify-items: left;
     }
 
-    .div-in-center{
-        padding-left:2rem;
-        padding-top:2rem;
-        padding-bottom:2rem;
+    .div-in-center {
+        padding-left: 2rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
     }
 
     /* Ostatní styly pro stránkování */
@@ -71,8 +71,8 @@ get_header();
         gap: 0.5rem; /* Mezera mezi šipkou a textem */
     }
 
-    .pagination-prev{
-        padding-right:2rem;
+    .pagination-prev {
+        padding-right: 2rem;
     }
 
     .thumbnail-fixed-width {
@@ -82,6 +82,23 @@ get_header();
         border-radius: 8px; /* Volitelně zaoblené rohy */
     }
 
+    .post-fixed-width {
+        width: 100%; /* Přizpůsobí se dostupnému prostoru */
+        max-width: 1200px; /* Maximální šířka pro větší obrazovky */
+        margin: 0 auto; /* Centrovat příspěvky */
+    }
+
+    @media (max-width: 768px) {
+        .post-fixed-width {
+            max-width: 600px; /* Přizpůsobí šířku na středních obrazovkách */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .post-fixed-width {
+            max-width: 100%; /* Příspěvky se roztáhnou na celou šířku na malých obrazovkách */
+        }
+    }
 </style>
 
 <div class="container mx-auto lg:max-w-4xl md:max-w-xl max-w-[250px] py-20">
@@ -100,7 +117,7 @@ get_header();
 
         if ($news_query->have_posts()) :
             while ($news_query->have_posts()) : $news_query->the_post(); ?>
-                <div class="flex flex-col items-center justify-center rounded-lg shadow-lg lg:flex-row md:flex-row">
+                <div class="flex flex-col items-center justify-center rounded-lg shadow-lg lg:flex-row md:flex-row post-fixed-width">
                     <div class="w-full lg:w-1/2 md:w-1/2">
                         <?php if (has_post_thumbnail()) : ?>
                             <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="thumbnail-fixed-width">
@@ -137,6 +154,5 @@ get_header();
         wp_reset_postdata(); ?>
     </div>
 </div>
-
 
 <?php get_footer(); ?>
