@@ -35,9 +35,11 @@ get_header();
     }
 
     .prose h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 700;
-        padding-top: 1rem;
+        padding: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
         background-color: #e3252d;
         color: #fff;
         width: 150px;
