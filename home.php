@@ -61,22 +61,18 @@ get_header();
         text-decoration: underline;
     }
 
-    .page-numbers {
-        display: inline-flex; /* Zarovnání na jeden řádek */
-        gap: 1rem; /* Přidání mezery mezi prvky stránkování */
-    }
-
     .page-numbers .pagination-prev,
     .page-numbers .pagination-next {
-        min-width: 100px; /* Nastavení minimální šířky pro šipky a text */
-        text-align: center; /* Zarovnání obsahu do středu */
+        display: inline-flex; /* Zarovnání šipky a textu na jeden řádek */
+        align-items: center; /* Vertikální zarovnání obsahu */
+        justify-content: center; /* Horizontální zarovnání */
+        min-width: 100px; /* Nastavení minimální šířky */
+        text-align: center; /* Zarovnání textu */
+        gap: 0.5rem; /* Mezera mezi šipkou a textem */
+        padding-right:1rem;
+        padding-left:1rem;
     }
 
-    .page-numbers span {
-        display: inline-block; /* Zachování správného zobrazení čísla */
-        min-width: 40px; /* Zvětšení šířky jednotlivých čísel */
-        text-align: center; /* Zarovnání čísla */
-    }
 
 </style>
 
