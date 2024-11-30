@@ -45,6 +45,9 @@ get_header();
         margin: 0 auto;         /* Centrum na stránce */
         padding: 1rem;
         gap: 1rem;              /* Mezera mezi obrázkem a textem */
+        background-color: #fff; /* Bílá barva pozadí */
+        border-radius: 8px;     /* Zaoblení rohů */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Přidání stínu */
     }
 
     @media (max-width: 768px) {
