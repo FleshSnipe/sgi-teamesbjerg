@@ -37,9 +37,7 @@ get_header();
         color: #687279;
     }
 
-    .container {
-        max-width: 900px;
-    }
+ 
 
 </style>
 
