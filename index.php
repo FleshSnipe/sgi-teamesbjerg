@@ -122,7 +122,6 @@ get_header();
                     Indtast din e-mailadresse nedenfor for at abonnere på vores nyhedsbrev!
                 </p>
                 <div class="flex justify-center pt-4 space-x-4">
-                    <?php echo do_shortcode('[contact-form-7 id="1f6b579" title="Newsletter"]'); ?>
                     <input type="email" class="bg-gray-50 border border-gray-300 text-gray-900 lg:text-sm md:text-sm text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block lg:w-[14rem] md:w-[14rem] w-[10rem] pl-4" placeholder="Your email address">
                     <button class="bg-[#e3252d] text-white lg:text-base text-sm lg:py-4 py-3 lg:px-5 px-4 rounded-lg">Subscribe</button>
                 </div>
