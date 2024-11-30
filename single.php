@@ -19,6 +19,7 @@ get_header();
 
 <style>
     .prose img {
+        align-self: center;
         max-width: 100%;
         height: auto;
     }
@@ -33,12 +34,11 @@ get_header();
     }
 
     .prose p {
-        font-size: 1.25rem;
         color: #687279;
     }
 
     .container {
-        max-width: 1152px;
+        max-width: 1100px;
     }
 
 </style>
