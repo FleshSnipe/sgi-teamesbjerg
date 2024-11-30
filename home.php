@@ -9,7 +9,8 @@ get_header();
         justify-content: center; /* Horizontální zarovnání */
         align-items: center;    /* Vertikální zarovnání */
         text-align: center;     /* Zarovnání textu */
-        height: 100%;           /* Výška pro správné zarovnání */
+        width: 90%;             /* Omezení šířky nadpisů */
+        margin: 0 auto;         /* Centrování nadpisů */
     }
 
     .greyy {
@@ -28,9 +29,9 @@ get_header();
         padding: 2rem;
     }
 
-    .thumbnail-fixed-width {
-        max-width: 500px;       /* Nastavení maximální šířky obrázku */
-        height: auto;           /* Automatické nastavení výšky */
+    .thumbnail-fixed-size {
+        width: 300px;           /* Nastavení stejné šířky pro všechny obrázky */
+        height: 200px;          /* Nastavení výšky pro všechny obrázky */
         object-fit: cover;      /* Zabrání deformaci obrázku */
         border-radius: 8px;
         margin: 0 auto;         /* Centrování obrázku horizontálně */
@@ -38,16 +39,18 @@ get_header();
 
     .post-fixed-width {
         width: 100%;
-        max-width: 1200px;
+        max-width: 800px;       /* Zmenšení šířky postu */
         margin: 0 auto;
         display: flex;
         flex-direction: row;
         justify-content: center; /* Zarovnání do středu */
+        padding: 1rem;
     }
 
     @media (max-width: 768px) {
         .post-fixed-width {
             flex-direction: column; /* Na mobilu budou prvky pod sebou */
+            max-width: 100%;         /* Na mobilu bude šířka postu 100% */
         }
     }
 </style>
@@ -71,7 +74,7 @@ get_header();
                 <div class="flex flex-col items-center justify-center rounded-lg shadow-lg lg:flex-row md:flex-row post-fixed-width">
                     <div class="w-full lg:w-1/2 md:w-1/2">
                         <?php if (has_post_thumbnail()) : ?>
-                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="thumbnail-fixed-width">
+                            <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="thumbnail-fixed-size">
                         <?php endif; ?>
                     </div>
                     <div class="div-in-center">
