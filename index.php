@@ -55,22 +55,8 @@ get_header();
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Přidání stínu */
     }
 
-    .flex-col-lg {
-        display: flex;
-        flex-direction: column; /* Na mobilu budou prvky pod sebou */
-        justify-content: center;
-        align-items: center;
-        gap: 1rem;
-        max-width: 700px;
-        margin: 0 auto;
-        padding: 2rem;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
     @media (max-width: 768px) {
-        .flex-col-lg {
+        .post-fixed-width {
             flex-direction: column; /* Na mobilu budou prvky pod sebou */
             max-width: 100%;         /* Na mobilu bude šířka postu 100% */
         }
@@ -103,32 +89,32 @@ get_header();
     </div>
     <div class="flex flex-col items-center space-y-8">
         <?php
-        // Načtení nejnovějších příspěvků
+        // Nastavení query pro příspěvky
+        $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
         $news_query = new WP_Query([
             'post_type' => 'post',
             'posts_per_page' => 3,
+            'paged' => $paged,
         ]);
 
         if ($news_query->have_posts()) :
             while ($news_query->have_posts()) : $news_query->the_post(); ?>
-                <div class="flex-col-lg">
-                    <div class="w-full h-full lg:w-1/2 md:w-1/2">
+                <div class="post-fixed-width">
+                    <div class="w-full">
                         <?php if (has_post_thumbnail()) : ?>
                             <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="thumbnail-fixed-size">
                         <?php endif; ?>
                     </div>
-                    <div class="flex flex-col items-center justify-center py-12 pl-8 space-y-4 lg:pl-20 lg:py-0 md:py-0 div-in-center">
+                    <div class="div-in-center">
                         <h3 class="text-sm font-medium lg:text-xl md:text-lg news-post-text">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
-                        <p class="text-xs text-gray-500 lg:text-base md:text-base greyy news-post-text">
+                        <p class="text-xs text-gray-500 lg:text-base md:text-base greyy">
                             <?php echo get_the_date(); ?>
                         </p>
                     </div>
                 </div>
-            <?php endwhile;
-            wp_reset_postdata();
-        endif; ?>
+            <?php endwhile; ?>
     </div>
     <div class="flex justify-center pt-8">
         <a href="<?php echo get_permalink(get_option('page_for_posts')); ?>" class="bg-[#e3252d] text-white font-medium lg:text-base text-sm lg:py-4 py-3 lg:px-5 px-4 rounded-lg">Alle Nyheder</a>
