@@ -39,6 +39,7 @@ get_header();
         font-weight: 700;
         padding-top: 1rem;
         background-color: #e3252d;
+        width: 100px;
     }
 
     .prose p {
