@@ -26,14 +26,14 @@ get_header();
         align-items: center;     /* Horizontální zarovnání */
         height: 100%;            /* Výška kontejneru */
         padding: 2rem;
-        width: 400px;            /* Bílá část má šířku 400px */
+        width: 500px;            /* Zvětšeno na 500px pro širší bílou část */
     }
 
     .thumbnail-fixed-size {
         width: 300px;           /* Nastavení stejné šířky pro všechny obrázky */
         height: 200px;          /* Nastavení výšky pro všechny obrázky */
         object-fit: cover;      /* Zabrání deformaci obrázku */
-        border-radius: 8px;
+        border-radius: 8px 0 0 8px;
     }
 
     .post-fixed-width {
@@ -41,9 +41,8 @@ get_header();
         flex-direction: row;    /* Obsah se zobrazí vedle sebe (obrázek + text) */
         justify-content: start; /* Zarovnání na začátek (vlevo) */
         width: 100%;            /* Vzít celou šířku dostupnou pro příspěvek */
-        max-width: 700px;       /* Maximální šířka pro celý příspěvek (obrázek + text) */
+        max-width: 800px;       /* Maximální šířka pro celý příspěvek (obrázek + text) */
         margin: 0 auto;         /* Centrum na stránce */
-        padding: 1rem;
         gap: 1rem;              /* Mezera mezi obrázkem a textem */
         background-color: #fff; /* Bílá barva pozadí */
         border-radius: 8px;     /* Zaoblení rohů */
@@ -57,6 +56,7 @@ get_header();
         }
     }
 </style>
+
 
 <div class="container mx-auto lg:max-w-4xl md:max-w-xl max-w-[250px] py-20">
     <div class="flex justify-center lg:text-4xl md:text-3xl text-2xl font-bold text-[#151517] pb-8">
