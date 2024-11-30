@@ -25,12 +25,13 @@ get_header();
     }
 
     .prose h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
         font-weight: 700;
     }
 
     .prose h2 {
-        font-size: 2rem;
+        font-size: 2.4rem;
+        font-weight: 700;
     }
 
     .prose p {
