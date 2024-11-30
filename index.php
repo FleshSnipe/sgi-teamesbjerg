@@ -12,55 +12,56 @@ get_header();
     }
 
     .news-post-text {
-        display: flex;
-        justify-content: center; /* Horizontální zarovnání */
-        align-items: center;    /* Vertikální zarovnání */
-        text-align: center;     /* Zarovnání textu */
-        width: 100%;            /* Nadpis bude mít šířku 100% v rámci svého kontejneru */
-    }
+    display: flex;
+    justify-content: center; /* Horizontální zarovnání */
+    align-items: center;    /* Vertikální zarovnání */
+    text-align: center;     /* Zarovnání textu */
+    width: 100%;            /* Nadpis bude mít šířku 100% v rámci svého kontejneru */
+}
 
-    .greyy {
-        display: flex;
-        justify-content: center; /* Horizontální zarovnání */
-        color: #6b7280;
-        text-align: center;
-    }
+.greyy {
+    display: flex;
+    justify-content: center; /* Horizontální zarovnání */
+    color: #6b7280;
+    text-align: center;
+}
 
-    .div-in-center {
-        display: flex;
-        flex-direction: column;
-        justify-content: center; /* Vertikální zarovnání */
-        align-items: center;     /* Horizontální zarovnání */
-        padding: 2rem;
-        width: 100%;            /* Bílá část má šířku 400px */
-    }
+.div-in-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Vertikální zarovnání */
+    align-items: center;     /* Horizontální zarovnání */
+    padding: 2rem;
+    width: 400px;            /* Šířka bílé části bude 400px */
+}
 
-    .thumbnail-fixed-size {
-        width: 300px;           /* Nastavení stejné šířky pro všechny obrázky */
-        height: 200px;          /* Nastavení výšky pro všechny obrázky */
-        object-fit: cover;      /* Zabrání deformaci obrázku */
-        border-radius: 8px 0 0 8px;
-    }
+.thumbnail-fixed-size {
+    width: 300px;           /* Nastavení stejné šířky pro všechny obrázky */
+    height: 200px;          /* Nastavení výšky pro všechny obrázky */
+    object-fit: cover;      /* Zabrání deformaci obrázku */
+    border-radius: 8px 0 0 8px; /* Zaoblení levého rohu */
+}
 
+.post-fixed-width {
+    display: flex;
+    flex-direction: row;    /* Obsah se zobrazí vedle sebe (obrázek + text) */
+    justify-content: start; /* Zarovnání na začátek (vlevo) */
+    width: 100%;            /* Vzít celou šířku dostupnou pro příspěvek */
+    max-width: 700px;       /* Maximální šířka pro celý příspěvek (obrázek + text) */
+    margin: 0 auto;         /* Centrum na stránce */
+    gap: 1rem;              /* Mezera mezi obrázkem a textem */
+    background-color: #fff; /* Bílá barva pozadí */
+    border-radius: 8px;     /* Zaoblení rohů */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Přidání stínu */
+}
+
+@media (max-width: 768px) {
     .post-fixed-width {
-        display: flex;
-        flex-direction: row;    /* Obsah se zobrazí vedle sebe (obrázek + text) */
-        justify-content: start; /* Zarovnání na začátek (vlevo) */
-        width: 100%;            /* Vzít celou šířku dostupnou pro příspěvek */
-        max-width: 700px;       /* Maximální šířka pro celý příspěvek (obrázek + text) */
-        margin: 0 auto;         /* Centrum na stránce */
-        gap: 1rem;              /* Mezera mezi obrázkem a textem */
-        background-color: #fff; /* Bílá barva pozadí */
-        border-radius: 8px;     /* Zaoblení rohů */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Přidání stínu */
+        flex-direction: column; /* Na mobilu budou prvky pod sebou */
+        max-width: 100%;         /* Na mobilu bude šířka postu 100% */
     }
+}
 
-    @media (max-width: 768px) {
-        .post-fixed-width {
-            flex-direction: column; /* Na mobilu budou prvky pod sebou */
-            max-width: 100%;         /* Na mobilu bude šířka postu 100% */
-        }
-    }
 
 </style>
 
@@ -97,13 +98,13 @@ get_header();
 
         if ($news_query->have_posts()) :
             while ($news_query->have_posts()) : $news_query->the_post(); ?>
-                <div class="flex-col-lg">
-                    <div class="w-full h-full lg:w-1/2 md:w-1/2">
+                <div class="post-fixed-width">
+                    <div class="w-full">
                         <?php if (has_post_thumbnail()) : ?>
                             <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="thumbnail-fixed-size">
                         <?php endif; ?>
                     </div>
-                    <div class="flex flex-col items-center justify-center py-12 pl-8 space-y-4 lg:pl-20 lg:py-0 md:py-0 div-in-center">
+                    <div class="div-in-center">
                         <h3 class="text-sm font-medium lg:text-xl md:text-lg news-post-text">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
