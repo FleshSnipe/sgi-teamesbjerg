@@ -61,6 +61,23 @@ get_header();
         text-decoration: underline;
     }
 
+    .pagination-prev,
+    .pagination-next {
+        display: inline-flex; /* Aby šipky měly větší šířku */
+        align-items: center;
+        justify-content: center;
+        padding: 0.5rem 1rem; /* Nastavení větší šířky a výšky */
+        font-size: 1.25rem; /* Zvětšení textu */
+        font-weight: bold; /* Zvýraznění textu */
+        background-color: #f0f0f0; /* Volitelný podklad */
+        border-radius: 4px; /* Kulaté rohy */
+    }
+
+    .pagination-prev:hover,
+    .pagination-next:hover {
+        background-color: #e0e0e0; /* Barva při najetí myší */
+    }
+
 </style>
 
 <div class="container mx-auto lg:max-w-4xl md:max-w-xl max-w-[250px] py-20">
@@ -102,8 +119,8 @@ get_header();
                     echo paginate_links([
                         'total' => $news_query->max_num_pages,
                         'current' => $paged,
-                        'prev_text' => __('&laquo; Previous'),
-                        'next_text' => __('Next &raquo;'),
+                        'prev_text' => '<span class="pagination-prev">&laquo; Previous</span>',
+                        'next_text' => '<span class="pagination-next">Next &raquo;</span>',
                         'before_page_number' => '<span class="page-numbers">',
                         'after_page_number' => '</span>',
                     ]);
