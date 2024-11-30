@@ -43,7 +43,7 @@ get_header();
         width: 100%;            /* Vzít celou šířku dostupnou pro příspěvek */
         max-width: 800px;       /* Maximální šířka pro celý příspěvek (obrázek + text) */
         margin: 0 auto;         /* Centrum na stránce */
-        gap: 1rem;              /* Mezera mezi obrázkem a textem */
+        padding:0px;
         background-color: #fff; /* Bílá barva pozadí */
         border-radius: 8px;     /* Zaoblení rohů */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Přidání stínu */
