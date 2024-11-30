@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div class="container mx-auto py-20 max-w-6xl ">
+<div class="container mx-auto py-20">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article class="prose lg:prose-xl mx-auto">
             <h1><?php the_title(); ?></h1>
@@ -16,6 +16,32 @@ get_header();
         </article>
     <?php endwhile; endif; ?>
 </div>
+
+<style>
+    .prose img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .prose h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+    }
+
+    .prose h2 {
+        font-size: 2rem;
+    }
+
+    .prose p {
+        font-size: 1.25rem;
+        color: #687279;
+    }
+
+    .container {
+        max-width: 1152px;
+    }
+
+</style>
 
 <?php
 get_footer();
