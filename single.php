@@ -2,7 +2,7 @@
 get_header();
 ?>
 
-<div class="container mx-auto py-20">
+<div class="container mx-auto py-20 max-w-6xl ">
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article class="prose lg:prose-xl mx-auto">
             <h1><?php the_title(); ?></h1>
