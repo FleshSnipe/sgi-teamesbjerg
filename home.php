@@ -4,13 +4,12 @@ get_header();
 ?>
 
 <style>
-   .news-post-text {
+    .news-post-text {
         display: flex;
         justify-content: center; /* Horizontální zarovnání */
         align-items: center;    /* Vertikální zarovnání */
         text-align: center;     /* Zarovnání textu */
-        width: 90%;             /* Omezení šířky nadpisů */
-        margin: 0 auto;         /* Centrování nadpisů */
+        width: 100%;            /* Nadpis bude mít šířku 100% v rámci svého kontejneru */
     }
 
     .greyy {
@@ -27,6 +26,7 @@ get_header();
         align-items: center;     /* Horizontální zarovnání */
         height: 100%;            /* Výška kontejneru */
         padding: 2rem;
+        width: 400px;            /* Bílá část má šířku 400px */
     }
 
     .thumbnail-fixed-size {
@@ -34,17 +34,17 @@ get_header();
         height: 200px;          /* Nastavení výšky pro všechny obrázky */
         object-fit: cover;      /* Zabrání deformaci obrázku */
         border-radius: 8px;
-        margin: 0 auto;         /* Centrování obrázku horizontálně */
     }
 
     .post-fixed-width {
-        width: 100%;
-        max-width: 800px;       /* Zmenšení šířky postu */
-        margin: 0 auto;
         display: flex;
-        flex-direction: row;
-        justify-content: center; /* Zarovnání do středu */
+        flex-direction: row;    /* Obsah se zobrazí vedle sebe (obrázek + text) */
+        justify-content: start; /* Zarovnání na začátek (vlevo) */
+        width: 100%;            /* Vzít celou šířku dostupnou pro příspěvek */
+        max-width: 700px;       /* Maximální šířka pro celý příspěvek (obrázek + text) */
+        margin: 0 auto;         /* Centrum na stránce */
         padding: 1rem;
+        gap: 1rem;              /* Mezera mezi obrázkem a textem */
     }
 
     @media (max-width: 768px) {
@@ -71,8 +71,8 @@ get_header();
 
         if ($news_query->have_posts()) :
             while ($news_query->have_posts()) : $news_query->the_post(); ?>
-                <div class="flex flex-col items-center justify-center rounded-lg shadow-lg lg:flex-row md:flex-row post-fixed-width">
-                    <div class="w-full lg:w-1/2 md:w-1/2">
+                <div class="post-fixed-width">
+                    <div class="w-full">
                         <?php if (has_post_thumbnail()) : ?>
                             <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="thumbnail-fixed-size">
                         <?php endif; ?>
