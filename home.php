@@ -69,10 +69,11 @@ get_header();
         min-width: 300px; /* Nastavení minimální šířky */
         text-align: center; /* Zarovnání textu */
         gap: 0.5rem; /* Mezera mezi šipkou a textem */
-        margin-right:2rem;
-        margin-left:2rem;
     }
 
+    .pagination-prev{
+        padding-right:2rem;
+    }
 
 </style>
 
