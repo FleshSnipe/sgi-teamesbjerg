@@ -61,8 +61,8 @@ get_header();
         text-decoration: underline;
     }
 
-    .page-numbers .pagination-prev,
-    .page-numbers .pagination-next {
+    .pagination-prev,
+    .pagination-next {
         display: flex; /* Zarovnání šipky a textu na jeden řádek */
         align-items: center; /* Vertikální zarovnání obsahu */
         justify-content: center; /* Horizontální zarovnání */
