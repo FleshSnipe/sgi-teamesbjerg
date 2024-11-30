@@ -6,72 +6,32 @@ get_header();
 <style>
    .news-post-text {
         display: flex;
-        justify-content: center; /* Zarovnání na střed */
-        align-items: center;
-        text-align: center; /* Text se zarovná doprostřed */
-        margin-right: 0; /* Odstranění mezery */
-        height: 100%;
-    }
-
-    /* Responzivní změna pro malé obrazovky (do 600px) */
-    @media (max-width: 600px) {
-        .news-post-text {
-            margin-right: 0;
-        }
+        justify-content: center; /* Horizontální zarovnání */
+        align-items: center;    /* Vertikální zarovnání */
+        text-align: center;     /* Zarovnání textu */
+        height: 100%;           /* Výška pro správné zarovnání */
     }
 
     .greyy {
         display: flex;
-        justify-content: center; /* Zarovnání na střed */
+        justify-content: center; /* Horizontální zarovnání */
         color: #6b7280;
-        text-align: center; /* Text se zarovná doprostřed */
+        text-align: center;
     }
 
     .div-in-center {
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Vertikální zarovnání */
+        align-items: center;     /* Horizontální zarovnání */
+        height: 100%;            /* Výška kontejneru */
         padding: 2rem;
     }
 
-    /* Ostatní styly pro stránkování */
-    .page-numbers {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 35px;
-        height: 35px;
-        background-color: white;
-        color: black;
-        border-radius: 50%;
-        text-decoration: none;
-        margin: 0 5px;
-    }
-
-    .page-numbers.current {
-        background-color: #e3252d;
-        color: white;
-    }
-
-    .page-numbers:hover {
-        text-decoration: underline;
-    }
-
-    .pagination-prev,
-    .pagination-next {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-width: 300px;
-        text-align: center;
-        gap: 0.5rem;
-    }
-
-    .pagination-prev {
-        padding-right: 2rem;
-    }
-
     .thumbnail-fixed-width {
-        width: 300px;
-        height: auto;
-        object-fit: cover;
+        width: 100%;           /* Obrázek zabere celou šířku rodičovského kontejneru */
+        height: auto;          /* Automatické nastavení výšky */
+        object-fit: cover;     /* Zabrání deformaci obrázku */
         border-radius: 8px;
     }
 
@@ -79,17 +39,13 @@ get_header();
         width: 100%;
         max-width: 1200px;
         margin: 0 auto;
+        display: flex;
+        flex-direction: row;
     }
 
     @media (max-width: 768px) {
         .post-fixed-width {
-            max-width: 600px;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .post-fixed-width {
-            max-width: 100%;
+            flex-direction: column; /* Na mobilu budou prvky pod sebou */
         }
     }
 </style>
@@ -116,7 +72,7 @@ get_header();
                             <img src="<?php the_post_thumbnail_url('medium'); ?>" alt="<?php the_title(); ?>" class="thumbnail-fixed-width">
                         <?php endif; ?>
                     </div>
-                    <div class="flex flex-col items-center justify-center py-12 pl-8 space-y-4 lg:pl-20 lg:py-0 md:py-0 div-in-center">
+                    <div class="div-in-center">
                         <h3 class="text-sm font-medium lg:text-xl md:text-lg news-post-text">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3>
