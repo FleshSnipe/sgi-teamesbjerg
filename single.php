@@ -6,7 +6,7 @@ get_header();
     <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
         <article class="prose lg:prose-xl mx-auto">
             <h4><?php the_title(); ?></h4>
-            <p class="text-gray-500 text-sm mb-6"><?php the_date(); ?> | Autor: <?php the_author(); ?></p>
+            <p class="text-gray-500 text-sm py-4"><?php the_date(); ?> | Autor: <?php the_author(); ?></p>
             <?php if (has_post_thumbnail()) : ?>
                 <img src="<?php the_post_thumbnail_url('large'); ?>" alt="<?php the_title(); ?>" class="rounded-lg mt-6">
             <?php endif; ?>
