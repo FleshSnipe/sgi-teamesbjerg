@@ -38,7 +38,7 @@ get_header();
     }
 
     .blog-wrapper{
-        max-width: 800px;
+        max-width: 850px;
     }
 
 </style>
