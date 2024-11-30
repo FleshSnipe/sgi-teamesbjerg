@@ -63,14 +63,14 @@ get_header();
 
     .page-numbers .pagination-prev,
     .page-numbers .pagination-next {
-        display: inline-flex; /* Zarovnání šipky a textu na jeden řádek */
+        display: flex; /* Zarovnání šipky a textu na jeden řádek */
         align-items: center; /* Vertikální zarovnání obsahu */
         justify-content: center; /* Horizontální zarovnání */
-        min-width: 100px; /* Nastavení minimální šířky */
+        min-width: 300px; /* Nastavení minimální šířky */
         text-align: center; /* Zarovnání textu */
         gap: 0.5rem; /* Mezera mezi šipkou a textem */
-        padding-right:1rem;
-        padding-left:1rem;
+        margin-right:2rem;
+        margin-left:2rem;
     }
 
 
