@@ -61,22 +61,16 @@ get_header();
         text-decoration: underline;
     }
 
-    .pagination-prev,
-    .pagination-next {
-        display: inline-flex; /* Aby šipky měly větší šířku */
-        align-items: center;
-        justify-content: center;
-        padding: 0.5rem 1rem; /* Nastavení větší šířky a výšky */
-        font-size: 1.25rem; /* Zvětšení textu */
-        font-weight: bold; /* Zvýraznění textu */
-        background-color: #f0f0f0; /* Volitelný podklad */
-        border-radius: 4px; /* Kulaté rohy */
+    .page-numbers .pagination-prev,
+    .page-numbers .pagination-next {
+        display: inline-flex; /* Zarovnání šipky a textu na jeden řádek */
+        align-items: center; /* Vertikální zarovnání obsahu */
+        justify-content: center; /* Horizontální zarovnání */
+        min-width: 100px; /* Nastavení minimální šířky */
+        text-align: center; /* Zarovnání textu */
+        gap: 0.5rem; /* Mezera mezi šipkou a textem */
     }
 
-    .pagination-prev:hover,
-    .pagination-next:hover {
-        background-color: #e0e0e0; /* Barva při najetí myší */
-    }
 
 </style>
 
