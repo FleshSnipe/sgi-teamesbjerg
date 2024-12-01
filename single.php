@@ -18,6 +18,10 @@ get_header();
 </div>
 
 <style>
+    .prose{
+        padding: 20px;
+    }
+
     .prose img {
         max
         max-width: 100%;
