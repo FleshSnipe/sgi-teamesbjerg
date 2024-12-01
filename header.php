@@ -4,8 +4,8 @@
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Discover the dynamic handball club in Esbjerg! Stay updated with team news, events, and join our vibrant community. Explore sponsorship opportunities, learn about our history, and follow us on social media for the latest updates.">
-    <title>SGI handball<?php bloginfo('name'); ?></title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <title>Team Esbjerg – SGI Håndbold U19 / U17 <?php bloginfo('name'); ?></title>
+    <link rel="icon" href="./images/favicon.ico" >
     <?php wp_head(); ?>
     <style>
         * {
