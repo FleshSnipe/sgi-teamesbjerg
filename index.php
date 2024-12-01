@@ -6,6 +6,10 @@ get_header();
 ?>
 
 <style>
+    .imageWholeTeam{
+        max-width: 60%;
+    }
+
     .news-post-text {
         display: flex;
         justify-content: center; /* Horizontální zarovnání */
