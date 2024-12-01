@@ -127,7 +127,7 @@ get_header();
     <div class="container py-20 mx-auto max-w-7xl">
         <div class="flex flex-col items-center">
             <h2 class="flex justify-center pb-8 text-2xl font-bold text-white lg:text-4xl md:text-3xl">
-                Socials
+            Følg os på sociale medier for flere opdateringer!
             </h2>
             <img src="<?php echo get_template_directory_uri(); ?>/images/wholeTeam.png" alt="wholeTeam" class="h-auto w-[50%] imageWholeTeam">
             <div class="flex">
