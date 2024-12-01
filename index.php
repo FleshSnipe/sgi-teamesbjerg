@@ -59,6 +59,19 @@ get_header();
         flex-direction: column; /* Na mobilu budou prvky pod sebou */
         max-width: 100%;         /* Na mobilu bude šířka postu 100% */
     }
+
+    .thumbnail-fixed-size {
+        width: 100%; /* Obrázek bude mít 100% šířku na mobilu */
+        height: 200px; /* Výška obrázku zůstane stejná */
+        border-radius: 8px 8px 0 0; /* Zaoblení rohů */
+    }
+
+    .news-post-text {
+        padding: 1rem; /* Přidání vnitřního odsazení */
+    }
+
+    
+
 }
 
 
@@ -76,7 +89,7 @@ get_header();
 
         <!-- Text uprostřed obrázku -->
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center block lg:w-full md:w-full w-[20rem]">
-            <div class="text-xl lg:text-6xl md:text-3xl">
+            <div class="text-xl lg:text-5xl md:text-3xl">
                 <h1>Team Esbjerg – SGI Håndbold U19 / U17</h1>
             </div>
         </div>
