@@ -76,7 +76,7 @@ get_header();
 
         <!-- Text uprostřed obrázku -->
         <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white font-bold text-center block lg:w-full md:w-full w-[20rem]">
-            <div class="text-xl lg:text-7xl md:text-3xl">
+            <div class="text-xl lg:text-6xl md:text-3xl">
                 <h1>Team Esbjerg – SGI Håndbold U19 / U17</h1>
             </div>
         </div>
