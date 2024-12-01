@@ -6,22 +6,17 @@ get_header();
 ?>
 
 <style>
-    .imageWholeTeam {
-        max-width: 60%;
-    }
-
     .news-post-text {
         display: flex;
-        justify-content: center; /* Horizontal alignment */
-        align-items: center;    /* Vertical alignment */
-        text-align: center;     /* Center text */
-        width: 100%;            /* Ensure it takes the full width of its container */
-        word-wrap: break-word;  /* Ensure long words break properly */
+        justify-content: center; /* Horizontální zarovnání */
+        align-items: center;    /* Vertikální zarovnání */
+        text-align: center;     /* Zarovnání textu */
+        width: 100%;            /* Nadpis bude mít šířku 100% v rámci svého kontejneru */
     }
 
     .greyy {
         display: flex;
-        justify-content: center; /* Horizontal alignment */
+        justify-content: center; /* Horizontální zarovnání */
         color: #6b7280;
         text-align: center;
     }
@@ -29,60 +24,36 @@ get_header();
     .div-in-center {
         display: flex;
         flex-direction: column;
-        justify-content: center; /* Vertical alignment */
-        align-items: center;     /* Horizontal alignment */
+        justify-content: center; /* Vertikální zarovnání */
+        align-items: center;     /* Horizontální zarovnání */
         padding: 2rem;
-        max-width: 100%;         /* Allow it to shrink on smaller screens */
-        box-sizing: border-box;  /* Include padding in width calculations */
+        width: 100%;            /* Bílá část má šířku 400px */
     }
 
     .thumbnail-fixed-size {
-        width: 100%;            /* Set the image to be fully responsive */
-        max-width: 300px;       /* Restrict max size */
-        height: auto;           /* Maintain aspect ratio */
-        object-fit: cover;      /* Prevent image distortion */
-        border-radius: 8px 0 0 8px; /* Rounded corners for left edge */
+        width: 300px;           /* Nastavení stejné šířky pro všechny obrázky */
+        height: 200px;          /* Nastavení výšky pro všechny obrázky */
+        object-fit: cover;      /* Zabrání deformaci obrázku */
+        border-radius: 8px 0 0 8px;
     }
 
     .post-fixed-width {
         display: flex;
-        flex-direction: row;    /* Image and text side by side */
-        justify-content: start; /* Align items to the start */
-        width: 100%;            /* Full width */
-        max-width: 700px;       /* Limit maximum width */
-        margin: 0 auto;         /* Center align */
-        gap: 1rem;              /* Space between image and text */
-        background-color: #fff; /* White background */
-        border-radius: 8px;     /* Rounded corners */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
-        overflow: hidden;       /* Prevent content overflow */
+        flex-direction: row;    /* Obsah se zobrazí vedle sebe (obrázek + text) */
+        justify-content: start; /* Zarovnání na začátek (vlevo) */
+        width: 100%;            /* Vzít celou šířku dostupnou pro příspěvek */
+        max-width: 700px;       /* Maximální šířka pro celý příspěvek (obrázek + text) */
+        margin: 0 auto;         /* Centrum na stránce */
+        gap: 1rem;              /* Mezera mezi obrázkem a textem */
+        background-color: #fff; /* Bílá barva pozadí */
+        border-radius: 8px;     /* Zaoblení rohů */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Přidání stínu */
     }
 
     @media (max-width: 768px) {
         .post-fixed-width {
-            flex-direction: column; /* Stack image and text vertically */
-            max-width: 100%;        /* Take full width */
-            padding: 1rem;          /* Add padding for spacing */
-        }
-
-        .thumbnail-fixed-size {
-            max-width: 100%;       /* Make the image responsive */
-            height: auto;          /* Maintain aspect ratio */
-        }
-
-        .div-in-center {
-            padding: 1rem;         /* Reduce padding on smaller screens */
-            width: 100%;           /* Ensure text container takes full width */
-            text-align: center;    /* Center align text */
-        }
-
-        .news-post-text {
-            font-size: 1rem;       /* Adjust font size for readability */
-            word-wrap: break-word; /* Ensure text does not overflow */
-        }
-
-        .greyy {
-            font-size: 0.875rem;   /* Reduce font size for date text */
+            flex-direction: column; /* Na mobilu budou prvky pod sebou */
+            max-width: 100%;         /* Na mobilu bude šířka postu 100% */
         }
     }
 </style>
