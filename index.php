@@ -25,7 +25,6 @@ get_header();
         display: flex;
         flex-direction: column;
         justify-content: center; /* Vertikální zarovnání */
-        align-items: center;     /* Horizontální zarovnání */
         padding: 2rem;
         width: 100%;            /* Bílá část má šířku 400px */
     }
