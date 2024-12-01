@@ -58,6 +58,10 @@ get_header();
             flex-direction: column; /* Na mobilu budou prvky pod sebou */
             max-width: 100%;         /* Na mobilu bude šířka postu 100% */
         }
+
+        .imageWholeTeam{
+        max-width: 90%;
+    }
     }
 </style>
 
